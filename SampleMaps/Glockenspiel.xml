@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<samplemap ID="Glockenspiel" RRGroupAmount="1" MicPositions=";" SaveMode="2">
+  <sample Root="72" LoKey="60" HiKey="66" LoVel="85" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_loud_C5_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="0"
+          MonolithLength="331776"/>
+  <sample Root="84" LoKey="72" HiKey="79" LoVel="85" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_loud_C6_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="331776"
+          MonolithLength="331776"/>
+  <sample Root="96" LoKey="84" HiKey="84" LoVel="85" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_loud_C7_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="663552"
+          MonolithLength="118784"/>
+  <sample Root="92" LoKey="80" HiKey="83" LoVel="85" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_loud_G#6_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="782336"
+          MonolithLength="233472"/>
+  <sample Root="67" LoKey="47" HiKey="59" LoVel="85" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_loud_G4_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="1015808"
+          MonolithLength="331776"/>
+  <sample Root="79" LoKey="67" HiKey="71" LoVel="85" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_loud_G5_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="1347584"
+          MonolithLength="331776"/>
+  <sample Root="72" LoKey="60" HiKey="66" LoVel="42" HiVel="84" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_medium_C5_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="1679360"
+          MonolithLength="319488"/>
+  <sample Root="84" LoKey="72" HiKey="78" LoVel="42" HiVel="84" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_medium_C6_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="1998848"
+          MonolithLength="319488"/>
+  <sample Root="96" LoKey="84" HiKey="84" LoVel="42" HiVel="84" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_medium_C7_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="2318336"
+          MonolithLength="126976"/>
+  <sample Root="67" LoKey="47" HiKey="59" LoVel="42" HiVel="84" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_medium_G4_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="2445312"
+          MonolithLength="319488"/>
+  <sample Root="79" LoKey="67" HiKey="71" LoVel="42" HiVel="84" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_medium_G5_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="2764800"
+          MonolithLength="307200"/>
+  <sample Root="91" LoKey="79" HiKey="83" LoVel="42" HiVel="84" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_medium_G6_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="3072000"
+          MonolithLength="212992"/>
+  <sample Root="72" LoKey="60" HiKey="66" LoVel="0" HiVel="41" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_soft_C5_02.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="3284992"
+          MonolithLength="180224"/>
+  <sample Root="84" LoKey="72" HiKey="78" LoVel="0" HiVel="41" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_soft_C6_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="3465216"
+          MonolithLength="180224"/>
+  <sample Root="96" LoKey="84" HiKey="84" LoVel="0" HiVel="41" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_soft_C7_03.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="3645440"
+          MonolithLength="180224"/>
+  <sample Root="67" LoKey="47" HiKey="59" LoVel="0" HiVel="41" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_soft_G4_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="3825664"
+          MonolithLength="180224"/>
+  <sample Root="79" LoKey="67" HiKey="71" LoVel="0" HiVel="41" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_soft_G5_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="4005888"
+          MonolithLength="180224"/>
+  <sample Root="91" LoKey="79" HiKey="83" LoVel="0" HiVel="41" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Glockenspiel/glock_soft_G6_01.wav"
+          Duplicate="0" Normalized="0" SampleRate="44100" MonolithOffset="4186112"
+          MonolithLength="147456"/>
+</samplemap>
