@@ -1,3 +1,5 @@
 Binaries/
 *.dat
 *.hip
+UserPresets/db.json
+*.hr1
