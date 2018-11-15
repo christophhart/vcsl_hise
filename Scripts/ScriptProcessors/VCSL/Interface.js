@@ -93,10 +93,10 @@ namespace KeyColourHandling
             local colour = 0x00000000;
             
             if(isMapped(i, 0))
-                colour |= 0x00FF0000;
+                colour |= 0x000077FF;
             
             if(isMapped(i, 1))
-                colour |= 0x0000FFFF;
+                colour |= 0x00FF8800;
                 
             if(colour == 0)
                 colour = 0xAA555555;
@@ -118,20 +118,19 @@ namespace KeyColourHandling
 
 namespace PageHandling
 {
-    
-    
     inline function refreshPage()
     {
         local pageToShow = currentPage == browseButton ? 1 : 0;
         
         pages[0].set("visible", currentPage == editButton);
-        pages[1].set("visible", currentPage == browseButton);
-        pages[2].set("visible", currentPage == settingsButton);
+        pages[1].set("visible", currentPage == fxButton);
+        pages[2].set("visible", currentPage == browseButton);
+        pages[3].set("visible", currentPage == settingsButton);
         
         editButton.repaint();
+        fxButton.repaint();
         browseButton.repaint();
         settingsButton.repaint();
-        
     }
     
     inline function makeButton(name)
@@ -154,7 +153,7 @@ namespace PageHandling
             if(this.data.down)
                 g.fillRoundedRectangle(b, 3.0);
                 
-            g.setColour(Colours.withAlpha(this.get("textColour"), this == currentPage ? 1.0 : 0.2));
+            g.setColour(Colours.withAlpha(0xFF444444, this == currentPage ? 1.0 : 0.2));
                 
             g.setFont("Oxygen Bold", 16.0);
                 
@@ -186,16 +185,50 @@ namespace PageHandling
     const var editButton = makeButton("Edit");
     const var browseButton = makeButton("Browse");
     const var settingsButton = makeButton("Settings");
+    const var fxButton = makeButton("FX");
     
-    const var pages = [Content.getComponent("EditPage"), Content.getComponent("BrowsePage"), Content.getComponent("SettingsPage")];
+    const var pages = [Content.getComponent("EditPage"),
+                       Content.getComponent("FXPage"),
+                       Content.getComponent("BrowsePage"), 
+                       Content.getComponent("SettingsPage")];
     
     
     reg currentPage = editButton;
     refreshPage();
 }
 
+include("PowerButton.js");
 
+PowerButton.make("FilterEnabled1");
+PowerButton.make("DelayEnabled1");
+PowerButton.make("FilterEnabled2");
+PowerButton.make("DelayEnabled2");
 
+const var filterModes = Engine.getFilterModeList();
+
+const var modes = [ filterModes.StateVariableLP,
+                    filterModes.StateVariableHP,
+                    filterModes.Allpass ];
+                    
+
+const var Filter1 = Synth.getEffect("Filter1");
+const var Filter2 = Synth.getEffect("Filter2");
+
+inline function onFilterSelector1Control(component, value)
+{
+    if(value)
+	    Filter1.setAttribute(Filter1.Mode, modes[value-1]);
+};
+
+Content.getComponent("FilterSelector1").setControlCallback(onFilterSelector1Control);
+
+inline function onFilterSelector2Control(component, value)
+{
+    if(value)
+	    Filter2.setAttribute(Filter2.Mode, modes[value-1]);
+};
+
+Content.getComponent("FilterSelector2").setControlCallback(onFilterSelector2Control);
 function onNoteOn()
 {
 	
