@@ -3,143 +3,152 @@
 <samplemap ID="Marimba" RRGroupAmount="1" MicPositions=";" SaveMode="2">
   <sample Root="59" LoKey="59" HiKey="64" LoVel="105" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_B2_loud_01.wav"
-          Duplicate="0" Normalized="0" LowerVelocityXFade="0" SampleRate="44100"
-          UpperVelocityXFade="0" MonolithOffset="0" MonolithLength="266240"/>
+          Duplicate="0" Normalized="1" LowerVelocityXFade="0" SampleRate="44100"
+          UpperVelocityXFade="0" MonolithOffset="0" MonolithLength="266240"
+          NormalizedPeak="24.537676"/>
   <sample Root="59" LoKey="59" HiKey="64" LoVel="42" HiVel="104" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_B2_med_01.wav"
-          Duplicate="0" LowerVelocityXFade="0" Normalized="0" UpperVelocityXFade="0"
+          Duplicate="0" LowerVelocityXFade="0" Normalized="1" UpperVelocityXFade="0"
           SampleRate="44100" MonolithOffset="266240" MonolithLength="249856"
-          Volume="6"/>
+          Volume="-8" NormalizedPeak="63.791687"/>
   <sample Root="59" LoKey="59" HiKey="64" LoVel="0" HiVel="41" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_B2_soft_01.wav"
-          Duplicate="0" UpperVelocityXFade="0" Normalized="0" SampleRate="44100"
+          Duplicate="0" UpperVelocityXFade="0" Normalized="1" SampleRate="44100"
           LowerVelocityXFade="0" MonolithOffset="516096" MonolithLength="237568"
-          Volume="9"/>
+          Volume="-5" NormalizedPeak="128"/>
   <sample Root="83" LoKey="83" HiKey="88" LoVel="105" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_B4_loud_01.wav"
-          Duplicate="0" Normalized="0" LowerVelocityXFade="0" SampleRate="44100"
-          UpperVelocityXFade="0" MonolithOffset="753664" MonolithLength="118784"/>
-  <sample Root="83" LoKey="83" HiKey="88" LoVel="42" HiVel="104" RRGroup="1"
-          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_B4_med_01.wav"
-          Duplicate="0" LowerVelocityXFade="0" Normalized="0" UpperVelocityXFade="0"
-          SampleRate="44100" MonolithOffset="872448" MonolithLength="73728"
-          Volume="6"/>
-  <sample Root="83" LoKey="83" HiKey="88" LoVel="0" HiVel="41" RRGroup="1"
-          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_B4_soft_01.wav"
-          Duplicate="0" UpperVelocityXFade="0" Normalized="0" SampleRate="44100"
-          LowerVelocityXFade="0" MonolithOffset="946176" MonolithLength="86016"
-          Volume="9"/>
+          Duplicate="0" Normalized="1" LowerVelocityXFade="0" SampleRate="44100"
+          UpperVelocityXFade="0" MonolithOffset="753664" MonolithLength="118784"
+          NormalizedPeak="8.5375195"/>
   <sample Root="48" LoKey="48" HiKey="54" LoVel="105" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_C2_loud_01.wav"
-          Duplicate="0" Normalized="0" LowerVelocityXFade="0" SampleRate="44100"
+          Duplicate="0" Normalized="1" LowerVelocityXFade="0" SampleRate="44100"
           UpperVelocityXFade="0" MonolithOffset="1032192" MonolithLength="372736"
-          Volume="0"/>
+          Volume="0" NormalizedPeak="5.4684582"/>
   <sample Root="48" LoKey="48" HiKey="54" LoVel="42" HiVel="104" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_C2_med_01.wav"
-          Duplicate="0" LowerVelocityXFade="0" Normalized="0" UpperVelocityXFade="0"
+          Duplicate="0" LowerVelocityXFade="0" Normalized="1" UpperVelocityXFade="0"
           SampleRate="44100" MonolithOffset="1404928" MonolithLength="299008"
-          Volume="6"/>
+          Volume="-8" NormalizedPeak="63.249126"/>
   <sample Root="48" LoKey="48" HiKey="54" LoVel="0" HiVel="41" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_C2_soft_01.wav"
-          Duplicate="0" UpperVelocityXFade="0" Normalized="0" SampleRate="44100"
+          Duplicate="0" UpperVelocityXFade="0" Normalized="1" SampleRate="44100"
           LowerVelocityXFade="0" MonolithOffset="1703936" MonolithLength="286720"
-          Volume="9"/>
+          Volume="-5" NormalizedPeak="128"/>
   <sample Root="72" LoKey="72" HiKey="78" LoVel="105" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_C4_loud_01.wav"
-          Duplicate="0" Normalized="0" LowerVelocityXFade="0" SampleRate="44100"
-          UpperVelocityXFade="0" MonolithOffset="1990656" MonolithLength="172032"/>
-  <sample Root="72" LoKey="72" HiKey="78" LoVel="42" HiVel="104" RRGroup="1"
-          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_C4_med_01.wav"
-          Duplicate="0" LowerVelocityXFade="0" Normalized="0" UpperVelocityXFade="0"
-          SampleRate="44100" MonolithOffset="2162688" MonolithLength="110592"
-          Volume="6"/>
-  <sample Root="72" LoKey="72" HiKey="78" LoVel="0" HiVel="41" RRGroup="1"
-          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_C4_soft_01.wav"
-          Duplicate="0" UpperVelocityXFade="0" Normalized="0" SampleRate="44100"
-          LowerVelocityXFade="0" MonolithOffset="2273280" MonolithLength="155648"
-          Volume="9"/>
+          Duplicate="0" Normalized="1" LowerVelocityXFade="0" SampleRate="44100"
+          UpperVelocityXFade="0" MonolithOffset="1990656" MonolithLength="172032"
+          NormalizedPeak="8.9016571"/>
   <sample Root="96" LoKey="96" HiKey="96" LoVel="105" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_C6_loud_01.wav"
-          Duplicate="0" Normalized="0" LowerVelocityXFade="0" SampleRate="44100"
-          UpperVelocityXFade="0" MonolithOffset="2428928" MonolithLength="81920"/>
-  <sample Root="96" LoKey="96" HiKey="96" LoVel="42" HiVel="104" RRGroup="1"
-          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_C6_med_01.wav"
-          Duplicate="0" LowerVelocityXFade="0" Normalized="0" UpperVelocityXFade="0"
-          SampleRate="44100" MonolithOffset="2510848" MonolithLength="77824"
-          Volume="6"/>
-  <sample Root="96" LoKey="96" HiKey="96" LoVel="0" HiVel="41" RRGroup="1"
-          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_C6_soft_01.wav"
-          Duplicate="0" UpperVelocityXFade="0" Normalized="0" SampleRate="44100"
-          LowerVelocityXFade="0" MonolithOffset="2588672" MonolithLength="110592"
-          Volume="9"/>
+          Duplicate="0" Normalized="1" LowerVelocityXFade="0" SampleRate="44100"
+          UpperVelocityXFade="0" MonolithOffset="2428928" MonolithLength="81920"
+          NormalizedPeak="8.7030544"/>
   <sample Root="41" LoKey="41" HiKey="47" LoVel="105" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_F1_loud_01.wav"
-          Duplicate="0" Normalized="0" LowerVelocityXFade="0" SampleRate="44100"
-          UpperVelocityXFade="0" MonolithOffset="2699264" MonolithLength="163840"/>
+          Duplicate="0" Normalized="1" LowerVelocityXFade="0" SampleRate="44100"
+          UpperVelocityXFade="0" MonolithOffset="2699264" MonolithLength="163840"
+          NormalizedPeak="19.085951"/>
   <sample Root="41" LoKey="41" HiKey="47" LoVel="42" HiVel="104" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_F1_med_01.wav"
-          Duplicate="0" LowerVelocityXFade="0" Normalized="0" UpperVelocityXFade="0"
+          Duplicate="0" LowerVelocityXFade="0" Normalized="1" UpperVelocityXFade="0"
           SampleRate="44100" MonolithOffset="2863104" MonolithLength="172032"
-          Volume="6"/>
+          Volume="-8" NormalizedPeak="57.786934"/>
   <sample Root="41" LoKey="41" HiKey="47" LoVel="0" HiVel="41" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_F1_soft_01.wav"
-          Duplicate="0" UpperVelocityXFade="0" Normalized="0" SampleRate="44100"
+          Duplicate="0" UpperVelocityXFade="0" Normalized="1" SampleRate="44100"
           LowerVelocityXFade="0" MonolithOffset="3035136" MonolithLength="135168"
-          Volume="9"/>
+          Volume="-5" NormalizedPeak="128"/>
   <sample Root="65" LoKey="65" HiKey="71" LoVel="105" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_F3_loud_01.wav"
-          Duplicate="0" Normalized="0" LowerVelocityXFade="0" SampleRate="44100"
-          UpperVelocityXFade="0" MonolithOffset="3170304" MonolithLength="266240"/>
-  <sample Root="65" LoKey="65" HiKey="71" LoVel="42" HiVel="104" RRGroup="1"
-          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_F3_med_01.wav"
-          Duplicate="0" LowerVelocityXFade="0" Normalized="0" UpperVelocityXFade="0"
-          SampleRate="44100" MonolithOffset="3436544" MonolithLength="233472"
-          Volume="6"/>
-  <sample Root="65" LoKey="65" HiKey="71" LoVel="0" HiVel="41" RRGroup="1"
-          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_F3_soft_01.wav"
-          Duplicate="0" UpperVelocityXFade="0" Normalized="0" SampleRate="44100"
-          LowerVelocityXFade="0" MonolithOffset="3670016" MonolithLength="245760"
-          Volume="9"/>
+          Duplicate="0" Normalized="1" LowerVelocityXFade="0" SampleRate="44100"
+          UpperVelocityXFade="0" MonolithOffset="3170304" MonolithLength="266240"
+          NormalizedPeak="11.660854"/>
   <sample Root="89" LoKey="89" HiKey="95" LoVel="105" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_F5_loud_01.wav"
-          Duplicate="0" Normalized="0" LowerVelocityXFade="0" SampleRate="44100"
-          UpperVelocityXFade="0" MonolithOffset="3915776" MonolithLength="94208"/>
-  <sample Root="89" LoKey="89" HiKey="95" LoVel="42" HiVel="104" RRGroup="1"
-          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_F5_med_01.wav"
-          Duplicate="0" LowerVelocityXFade="0" Normalized="0" UpperVelocityXFade="0"
-          SampleRate="44100" MonolithOffset="4009984" MonolithLength="98304"
-          Volume="6"/>
-  <sample Root="89" LoKey="89" HiKey="95" LoVel="0" HiVel="41" RRGroup="1"
-          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_F5_soft_01.wav"
-          Duplicate="0" UpperVelocityXFade="0" Normalized="0" SampleRate="44100"
-          LowerVelocityXFade="0" MonolithOffset="4108288" MonolithLength="65536"
-          Volume="9"/>
+          Duplicate="0" Normalized="1" LowerVelocityXFade="0" SampleRate="44100"
+          UpperVelocityXFade="0" MonolithOffset="3915776" MonolithLength="94208"
+          NormalizedPeak="16.184731"/>
   <sample Root="55" LoKey="55" HiKey="58" LoVel="105" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_G2_loud_01.wav"
-          Duplicate="0" Normalized="0" LowerVelocityXFade="0" SampleRate="44100"
-          UpperVelocityXFade="0" MonolithOffset="4173824" MonolithLength="311296"/>
+          Duplicate="0" Normalized="1" LowerVelocityXFade="0" SampleRate="44100"
+          UpperVelocityXFade="0" MonolithOffset="4173824" MonolithLength="311296"
+          NormalizedPeak="13.122547"/>
   <sample Root="55" LoKey="55" HiKey="58" LoVel="42" HiVel="104" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_G2_med_01.wav"
-          Duplicate="0" LowerVelocityXFade="0" Normalized="0" UpperVelocityXFade="0"
+          Duplicate="0" LowerVelocityXFade="0" Normalized="1" UpperVelocityXFade="0"
           SampleRate="44100" MonolithOffset="4485120" MonolithLength="253952"
-          Volume="6"/>
+          Volume="-8" NormalizedPeak="83.716087"/>
   <sample Root="55" LoKey="55" HiKey="58" LoVel="0" HiVel="41" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_G2_soft_01.wav"
-          Duplicate="0" UpperVelocityXFade="0" Normalized="0" SampleRate="44100"
+          Duplicate="0" UpperVelocityXFade="0" Normalized="1" SampleRate="44100"
           LowerVelocityXFade="0" MonolithOffset="4739072" MonolithLength="286720"
-          Volume="9"/>
+          Volume="-5" NormalizedPeak="128"/>
   <sample Root="79" LoKey="79" HiKey="82" LoVel="105" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_G4_loud_01.wav"
-          Duplicate="0" Normalized="0" LowerVelocityXFade="0" SampleRate="44100"
-          UpperVelocityXFade="0" MonolithOffset="5025792" MonolithLength="135168"/>
+          Duplicate="0" Normalized="1" LowerVelocityXFade="0" SampleRate="44100"
+          UpperVelocityXFade="0" MonolithOffset="5025792" MonolithLength="135168"
+          NormalizedPeak="9.544713"/>
+  <sample Root="83" LoKey="83" HiKey="88" LoVel="42" HiVel="104" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_B4_med_01.wav"
+          Duplicate="0" LowerVelocityXFade="0" Normalized="1" UpperVelocityXFade="0"
+          SampleRate="44100" MonolithOffset="872448" MonolithLength="73728"
+          Volume="-8" NormalizedPeak="36.385036"/>
+  <sample Root="83" LoKey="83" HiKey="88" LoVel="0" HiVel="41" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_B4_soft_01.wav"
+          Duplicate="0" UpperVelocityXFade="0" Normalized="1" SampleRate="44100"
+          LowerVelocityXFade="0" MonolithOffset="946176" MonolithLength="86016"
+          Volume="-5" NormalizedPeak="128"/>
+  <sample Root="72" LoKey="72" HiKey="78" LoVel="42" HiVel="104" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_C4_med_01.wav"
+          Duplicate="0" LowerVelocityXFade="0" Normalized="1" UpperVelocityXFade="0"
+          SampleRate="44100" MonolithOffset="2162688" MonolithLength="110592"
+          Volume="-8" NormalizedPeak="30.07354"/>
+  <sample Root="72" LoKey="72" HiKey="78" LoVel="0" HiVel="41" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_C4_soft_01.wav"
+          Duplicate="0" UpperVelocityXFade="0" Normalized="1" SampleRate="44100"
+          LowerVelocityXFade="0" MonolithOffset="2273280" MonolithLength="155648"
+          Volume="-5" NormalizedPeak="128"/>
+  <sample Root="96" LoKey="96" HiKey="96" LoVel="0" HiVel="41" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_C6_soft_01.wav"
+          Duplicate="0" UpperVelocityXFade="0" Normalized="1" SampleRate="44100"
+          LowerVelocityXFade="0" MonolithOffset="2588672" MonolithLength="110592"
+          Volume="-5" NormalizedPeak="128"/>
+  <sample Root="65" LoKey="65" HiKey="71" LoVel="42" HiVel="104" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_F3_med_01.wav"
+          Duplicate="0" LowerVelocityXFade="0" Normalized="1" UpperVelocityXFade="0"
+          SampleRate="44100" MonolithOffset="3436544" MonolithLength="233472"
+          Volume="-8" NormalizedPeak="54.757118"/>
+  <sample Root="65" LoKey="65" HiKey="71" LoVel="0" HiVel="41" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_F3_soft_01.wav"
+          Duplicate="0" UpperVelocityXFade="0" Normalized="1" SampleRate="44100"
+          LowerVelocityXFade="0" MonolithOffset="3670016" MonolithLength="245760"
+          Volume="-5" NormalizedPeak="104.70781"/>
+  <sample Root="89" LoKey="89" HiKey="95" LoVel="0" HiVel="41" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_F5_soft_01.wav"
+          Duplicate="0" UpperVelocityXFade="0" Normalized="1" SampleRate="44100"
+          LowerVelocityXFade="0" MonolithOffset="4108288" MonolithLength="65536"
+          Volume="-5" NormalizedPeak="128"/>
   <sample Root="79" LoKey="79" HiKey="82" LoVel="42" HiVel="104" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_G4_med_01.wav"
-          Duplicate="0" LowerVelocityXFade="0" Normalized="0" UpperVelocityXFade="0"
+          Duplicate="0" LowerVelocityXFade="0" Normalized="1" UpperVelocityXFade="0"
           SampleRate="44100" MonolithOffset="5160960" MonolithLength="98304"
-          Volume="6"/>
+          Volume="-8" NormalizedPeak="37.545887"/>
   <sample Root="79" LoKey="79" HiKey="82" LoVel="0" HiVel="41" RRGroup="1"
           FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_G4_soft_01.wav"
-          Duplicate="0" UpperVelocityXFade="0" Normalized="0" SampleRate="44100"
+          Duplicate="0" UpperVelocityXFade="0" Normalized="1" SampleRate="44100"
           LowerVelocityXFade="0" MonolithOffset="5259264" MonolithLength="147456"
-          Volume="9"/>
+          Volume="-5" NormalizedPeak="110.97466"/>
+  <sample Root="96" LoKey="96" HiKey="96" LoVel="42" HiVel="104" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_C6_med_01.wav"
+          Duplicate="0" LowerVelocityXFade="0" Normalized="1" UpperVelocityXFade="0"
+          SampleRate="44100" MonolithOffset="2510848" MonolithLength="77824"
+          Volume="-8" NormalizedPeak="63.363789"/>
+  <sample Root="89" LoKey="89" HiKey="95" LoVel="42" HiVel="104" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Marimba/Marimba_hit_Outrigger_F5_med_01.wav"
+          Duplicate="0" LowerVelocityXFade="0" Normalized="1" UpperVelocityXFade="0"
+          SampleRate="44100" MonolithOffset="4009984" MonolithLength="98304"
+          Volume="-8" NormalizedPeak="92.066376"/>
 </samplemap>
