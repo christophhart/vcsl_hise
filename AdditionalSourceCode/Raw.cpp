@@ -34,34 +34,62 @@ VCSLData::VCSLData(MainController* mc) :
 		velo->setId("Velocity" + String(index + 1));
 
 		builder.add<ColourMidiProcessor>(new ColourMidiProcessor(sampler, index), sampler, raw::IDs::Chains::Midi);
+
+		auto fx = builder.create<hise::PolyFilterEffect>(sampler, raw::IDs::Chains::FX);
+		fx->setId("Filter" + String(index + 1));
+
+		auto delay = builder.create<hise::DelayEffect>(sampler, raw::IDs::Chains::FX);
+		delay->setId("Delay" + String(index + 1));
 	};
 
 	addSampler(0);
 	addSampler(1);
 
-	addToUserPreset<raw::Data::SampleMap>("LoadedMap1", "Sampler1");
-	addToUserPreset<raw::Data::Table<0>>("VeloTable1", "Velocity1");
-	addToUserPreset<raw::Data::Attribute<SimpleEnvelope::Release>>("Release1", "DefaultEnvelope1");
-	addToUserPreset<raw::Data::Attribute<ColourMidiProcessor::ColourValue>>("Colour1", "Colour1");
-	addToUserPreset<raw::Data::SampleMap>("LoadedMap2", "Sampler2");
-	addToUserPreset<raw::Data::Table<0>>("VeloTable2", "Velocity2");
-	addToUserPreset<raw::Data::Attribute<SimpleEnvelope::Release>>("Release2", "DefaultEnvelope2");
-	addToUserPreset<raw::Data::Attribute<ColourMidiProcessor::ColourValue>>("Colour2", "Colour2");
+	addToUserPreset<raw::GenericStorage::SampleMap>("LoadedMap1", "Sampler1");
+	addToUserPreset<raw::GenericStorage::Table<0>>("VeloTable1", "Velocity1");
+	addToUserPreset<raw::GenericStorage::Attribute<SimpleEnvelope::Release>>("Release1", "DefaultEnvelope1");
+	addToUserPreset<raw::GenericStorage::Attribute<ColourMidiProcessor::ColourValue>>("Colour1", "Colour1");
+	addToUserPreset<raw::GenericStorage::SampleMap>("LoadedMap2", "Sampler2");
+	addToUserPreset<raw::GenericStorage::Table<0>>("VeloTable2", "Velocity2");
+	addToUserPreset<raw::GenericStorage::Attribute<SimpleEnvelope::Release>>("Release2", "DefaultEnvelope2");
+	addToUserPreset<raw::GenericStorage::Attribute<ColourMidiProcessor::ColourValue>>("Colour2", "Colour2");
 
-	RawPluginParameter::ProcessorConnection s = { getMainController(), "DefaultEnvelope1", SimpleEnvelope::Release, {0.0f, 20000.0f, 0.1f} };
-	s.range.setSkewForCentre(1000.0f);
+	addToUserPreset<raw::GenericStorage::Bypassed<true>>("Delay1Enabled", "Delay1");
+	addToUserPreset<raw::GenericStorage::Attribute<DelayEffect::DelayTimeLeft>>("DelayLeft1", "Delay1");
+	addToUserPreset<raw::GenericStorage::Attribute<DelayEffect::DelayTimeRight>>("DelayRight1", "Delay1");
+	addToUserPreset<raw::GenericStorage::Attribute<DelayEffect::FeedbackLeft>>("FeedbackLeft1", "Delay1");
+	addToUserPreset<raw::GenericStorage::Attribute<DelayEffect::FeedbackRight>>("FeedbackRight1", "Delay1");
+	addToUserPreset<raw::GenericStorage::Attribute<DelayEffect::Mix>>("Mix1", "Delay1");
 
-	addParameter("Release 1", RawPluginParameter::Type::Slider, { s });
+	addToUserPreset<raw::GenericStorage::Bypassed<true>>("Delay2Enabled", "Delay2");
+	addToUserPreset<raw::GenericStorage::Attribute<DelayEffect::DelayTimeLeft>>("DelayLeft2", "Delay2");
+	addToUserPreset<raw::GenericStorage::Attribute<DelayEffect::DelayTimeRight>>("DelayRight2", "Delay2");
+	addToUserPreset<raw::GenericStorage::Attribute<DelayEffect::FeedbackLeft>>("FeedbackLeft2", "Delay2");
+	addToUserPreset<raw::GenericStorage::Attribute<DelayEffect::FeedbackRight>>("FeedbackRight2", "Delay2");
+	addToUserPreset<raw::GenericStorage::Attribute<DelayEffect::Mix>>("Mix2", "Delay2");
 
-	RawPluginParameter::ProcessorConnection s2 = { getMainController(), "DefaultEnvelope2", SimpleEnvelope::Release,{ 0.0f, 20000.0f, 0.1f } };
-	s2.range.setSkewForCentre(1000.0f);
+#define raw_parameter(x, name) raw::PluginParameter<raw::Data<float>::Attribute<x>>(getMainController(), name); 
 
-	//addParameter("Release 2", RawPluginParameter::Type::Slider, { s2 });
+	auto p1 = new raw_parameter(SimpleEnvelope::Release, "Release 1");
+	p1->setup(raw::IDs::UIWidgets::Slider, "DefaultEnvelope1", { 0.0f, 20000.0f, 0.1f }, 1000.0f);
+	addParameter(p1);
+
+	auto p2 = new raw_parameter(SimpleEnvelope::Release, "Release 2");
+	p2->setup(raw::IDs::UIWidgets::Slider, "DefaultEnvelope2", { 0.0f, 20000.0f, 0.1f }, 1000.0f);
+	addParameter(p2);
+	
+	auto p3 = new raw_parameter(ColourMidiProcessor::ColourValue, "Colour 1");
+	p3->setup(raw::IDs::UIWidgets::Slider, "Colour1", { -12.0, 12.0, 1.0 }, 0.0f);
+	addParameter(p3);
+
+	auto p4 = new raw_parameter(ColourMidiProcessor::ColourValue, "Colour 2");
+	p4->setup(raw::IDs::UIWidgets::Slider, "Colour2", { -12.0, 12.0, 1.0 }, 0.0f);
+	addParameter(p4);
+	
 }
 
 VCSOInterface::SamplerTab::SamplerTab(MainController* mc, int index_) :
-	ControlledObject(mc),
-	index(index_),
+	Tab(mc, index_),
 	instrumentTitle(indexed("InstrumentTitle"), "Layer " + String(index == 0 ? "A" : "B"), false),
 	veloTitle(indexed("VelocityTitle"), "Velocity " + String(index == 0 ? "A" : "B"), false),
 	sampler(mc, indexed("Sampler")),
@@ -69,43 +97,26 @@ VCSOInterface::SamplerTab::SamplerTab(MainController* mc, int index_) :
 	releaseLabel(indexed("ReleaseLabel"), "Release"),
 	velocityMod(mc, indexed("Velocity")),
 	colorScript(mc, indexed("Colour"), true),
-	releaseConnection(&releaseSlider, mc, indexed("DefaultEnvelope"), SimpleEnvelope::Release),
-	colourConnection(&colourSlider, mc, indexed("Colour"), ColourMidiProcessor::ColourValue),
+	releaseSlider(mc, indexed("ReleaseSlider")),
+	colourSlider(mc, indexed("ColourSlider")),
+	sampleMapSelector(mc, indexed("InstrumentSelector"), indexed("Sampler")),
 	velocityEditor(nullptr, nullptr)
 {
 	setName(indexed("Tab"));
 
-	raw::Pool pool(mc, true);
-	flaf.setFilmstripImage(pool.loadImage("Strip.png"), 100);
-
 	addAndMakeVisible(instrumentPanel);
 	instrumentPanel.setName(indexed("InstrumentPanel"));
-
 	instrumentPanel.addAndMakeVisible(instrumentTitle);
 	instrumentPanel.addAndMakeVisible(colourLabel);
 	instrumentPanel.addAndMakeVisible(releaseLabel);
-
 	instrumentPanel.addAndMakeVisible(sampleMapSelector);
-	sampleMapSelector.setName(indexed("InstrumentSelector"));
-	getMainController()->skin(sampleMapSelector);
-	sampleMapSelector.addItemList(pool.getSampleMapList(), 1);
-	sampleMapSelector.addListener(this);
+	sampleMapSelector.addItemList(raw::Pool(mc, true).getSampleMapList(), 1);
+	sampleMapSelector.setConnectionMode(raw::UIConnection::ComboBox::Text);
+	sampleMapSelector.setTextWhenNothingSelected("Select Sampleset");
 
-	sampleMapSelector.setColour(HiseColourScheme::ComponentTextColourId, Colours::black);
-	sampleMapSelector.setColour(HiseColourScheme::ComponentBackgroundColour, Colours::transparentBlack);
-	sampleMapSelector.setColour(HiseColourScheme::ComponentOutlineColourId, Colours::transparentBlack);
-	sampleMapSelector.setColour(HiseColourScheme::ComponentFillTopColourId, Colour(0x11333333));
-	sampleMapSelector.setColour(HiseColourScheme::ComponentFillBottomColourId, Colour(0x20111111));
-
-	sampler->getSampleMap()->addListener(this);
-	sampleMapSelector.setText(sampler->getSampleMap()->getReference().getReferenceString(), dontSendNotification);
-
-	instrumentPanel.addAndMakeVisible(colourSlider);
-	colourSlider.setName(indexed("ColourSlider"));
-	colourSlider.setRange(-12.0, 12.0, 1.0);
-	colourSlider.setSliderStyle(Slider::RotaryHorizontalVerticalDrag);
-	colourSlider.setLookAndFeel(&flaf);
-	colourSlider.setTextBoxStyle(Slider::NoTextBox, false, 0, 0);
+	instrumentPanel.addAndMakeVisible(colourSlider);	
+	colourSlider.connect(indexed("Colour"));
+	colourSlider.setMode(HiSlider::Linear, -12.0, 12.0, 0.0, 1.0);
 
 	auto f = [this](float newValue)
 	{
@@ -116,13 +127,8 @@ VCSOInterface::SamplerTab::SamplerTab(MainController* mc, int index_) :
 	colorScript.addParameterToWatch(0, f);
 
 	instrumentPanel.addAndMakeVisible(releaseSlider);
-	releaseSlider.setName(indexed("ReleaseSlider"));
-	releaseSlider.setRange(0.0, 20000.0, 0.1);
-	releaseSlider.setSkewFactorFromMidPoint(1000.0);
-	releaseSlider.setTextValueSuffix(" ms");
-	releaseSlider.setSliderStyle(Slider::RotaryHorizontalVerticalDrag);
-	releaseSlider.setLookAndFeel(&flaf);
-	releaseSlider.setTextBoxStyle(Slider::NoTextBox, false, 0, 0);
+	releaseSlider.connect(indexed("DefaultEnvelope"));
+	releaseSlider.setMode(HiSlider::Frequency);
 
 	addAndMakeVisible(velocityPanel);
 	velocityPanel.setName(indexed("VelocityPanel"));
@@ -134,10 +140,10 @@ VCSOInterface::SamplerTab::SamplerTab(MainController* mc, int index_) :
 	velocityEditor.setName(indexed("Table"));
 	velocityEditor.setUseFlatDesign(true);
 	velocityEditor.setColour(TableEditor::ColourIds::bgColour, Colour(0x00161616));
-	velocityEditor.setColour(TableEditor::ColourIds::fillColour, Colour(index == 0 ? LeftColour : rightColour));
+	velocityEditor.setColour(TableEditor::ColourIds::fillColour, Colour(index == 0 ? leftColour : rightColour));
 	velocityEditor.setColour(TableEditor::ColourIds::lineColour, Colour(0xFB5F5F5F));
 	velocityEditor.connectToLookupTableProcessor(velocityMod, 0);
-
+	velocityEditor.setLineThickness(1.0f);
 }
 
 VCSOInterface::VCSOInterface(VCSLData* data) :
@@ -151,7 +157,9 @@ VCSOInterface::VCSOInterface(VCSLData* data) :
 	audioSettings(getMainController(), nullptr),
 	midiSources(getMainController(), nullptr),
 	audioLabel("AudioSettingsLabel", "Audio Settings", false),
-	midiLabel("MIDILabel", "MIDI Sources", false)
+	midiLabel("MIDILabel", "MIDI Sources", false),
+	fxTab1(getMainController(), 0),
+	fxTab2(getMainController(), 1)
 {
 	auto& glaf = data->getMainController()->getGlobalLookAndFeel();
 	glaf.setColour(PopupMenu::ColourIds::backgroundColourId, Colour(0xFFAAAAAA));
@@ -160,11 +168,9 @@ VCSOInterface::VCSOInterface(VCSLData* data) :
 	glaf.setColour(PopupMenu::ColourIds::highlightedBackgroundColourId, Colour(0xFF333333));
 	glaf.setColour(PopupMenu::ColourIds::highlightedTextColourId, Colour(0xFF999999));
 
-
 	setName("Background");
 
 	addAndMakeVisible(mainTitle);
-
 	addAndMakeVisible(keyboard);
 
 	keyboard.setName("Keyboard");
@@ -182,6 +188,10 @@ VCSOInterface::VCSOInterface(VCSLData* data) :
 	editPage.addAndMakeVisible(tab1);
 	editPage.addAndMakeVisible(tab2);
 	
+	addAndMakeVisible(fxPage);
+	fxPage.setName("FXPage");
+	fxPage.addAndMakeVisible(fxTab1);
+	fxPage.addAndMakeVisible(fxTab2);
 
 	addAndMakeVisible(browsePage);
 	browsePage.setName("BrowsePage");
@@ -242,8 +252,7 @@ VCSOInterface::VCSOInterface(VCSLData* data) :
 	midiSources.setOpaque(false);
 
 	audioSettings.setOpaque(false);
-	audioSettings.setColour(CustomSettingsWindow::ColourIds::textColour, Colour(0xFF444444));
-	
+	audioSettings.setColour(CustomSettingsWindow::ColourIds::textColour, Colour(0xFF444444));	
 
 	addAndMakeVisible(hiseLogo);
 	hiseLogo.setName("HiseLogo");
@@ -253,29 +262,21 @@ VCSOInterface::VCSOInterface(VCSLData* data) :
 	vcslLogo.setName("VCSLLogo");
 	vcslLogo.setImage(raw::Pool(getMainController(), true).loadImage("VCSL_Color_600x600.png"));
 
-	addAndMakeVisible(editButton);
-	editButton.setName("EditButton");
-	editButton.setButtonText("Edit");
-	editButton.addListener(this);
-	editButton.setRadioGroupId(1, dontSendNotification);
-	editButton.setClickingTogglesState(true);
-	editButton.setLookAndFeel(&plaf);
+	auto makeButton = [this](Button& b, const String& s)
+	{
+		addAndMakeVisible(b);
+		b.setName(s + "Button");
+		b.setButtonText(s);
+		b.addListener(this);
+		b.setRadioGroupId(1, dontSendNotification);
+		b.setClickingTogglesState(true);
+		b.setLookAndFeel(&plaf);
+	};
 
-	addAndMakeVisible(browseButton);
-	browseButton.setName("BrowseButton");
-	browseButton.setButtonText("Browse");
-	browseButton.addListener(this);
-	browseButton.setRadioGroupId(1, dontSendNotification);
-	browseButton.setClickingTogglesState(true);
-	browseButton.setLookAndFeel(&plaf);
-
-	addAndMakeVisible(settingsButton);
-	settingsButton.setName("SettingsButton");
-	settingsButton.setButtonText("Settings");
-	settingsButton.addListener(this);
-	settingsButton.setRadioGroupId(1, dontSendNotification);
-	settingsButton.setClickingTogglesState(true);
-	settingsButton.setLookAndFeel(&plaf);
+	makeButton(editButton, "Edit");
+	makeButton(fxButton, "FX");
+	makeButton(browseButton, "Browse");
+	makeButton(settingsButton, "Settings");
 
 	showPage(&settingsButton);
 
@@ -293,15 +294,15 @@ void VCSOInterface::paint(Graphics& g)
 
 void VCSOInterface::resized()
 {
-	hise::raw::Positioner p(
+	raw::Positioner p(
 	{
-	 "Background", { 0, 0, 1023, 771 }, 
+	 "Background", { 0, 1, 1024, 768 }, 
 	 {
 	  { "Keyboard", { 18, 663, 988, 108 }, {} },
 	  { "HiseLogo", { 956, 15, 50, 50 }, {} },
 	  { "VCSLLogo", { 15, 12, 50, 50 }, {} },
-	  { "EditButton", { 265, 600, 110, 50 }, {} },
-	  { "BrowseButton", { 462, 600, 110, 50 }, {} },
+	  { "EditButton", { 197, 600, 110, 50 }, {} },
+	  { "BrowseButton", { 540, 600, 110, 50 }, {} },
 	  { "Title", { 85, 20, 853, 39 }, {} },
 	  {
 	   "EditPage", { 0, 0, 1034, 588 }, 
@@ -365,7 +366,7 @@ void VCSOInterface::resized()
 		}
 	   }
 	  },
-	  { "SettingsButton", { 660, 600, 110, 50 }, {} },
+	  { "SettingsButton", { 712, 600, 110, 50 }, {} },
 	  {
 	   "SettingsPage", { 0, 1, 1034, 588 }, 
 	   {
@@ -379,10 +380,86 @@ void VCSOInterface::resized()
 		 }
 		}
 	   }
+	  },
+	  { "FXButton", { 368, 600, 110, 50 }, {} },
+	  {
+	   "FXPage", { 0, 0, 1034, 588 }, 
+	   {
+		{
+		 "FXTab1", { 0, 0, 515, 585 }, 
+		 {
+		  {
+		   "DelayPanel1", { 85, 416, 414, 158 }, 
+		   {
+			{ "DelayTitle1", { 17, 17, 381, 38 }, {} },
+			{ "LeftTimeLabel1", { -12, 122, 128, 28 }, {} },
+			{ "MixLabel1", { 318, 122, 108, 28 }, {} },
+			{ "MixSlider1", { 337, 67, 70, 60 }, {} },
+			{ "LeftTimeSlider1", { 19, 67, 70, 60 }, {} },
+			{ "RightTimeSlider1", { 98, 67, 70, 60 }, {} },
+			{ "RightTimeLabel1", { 70, 122, 128, 28 }, {} },
+			{ "DelayEnabled1", { 17, 17, 381, 38 }, {} },
+			{ "LeftFBSlider1", { 178, 67, 70, 60 }, {} },
+			{ "LeftFBLabel1", { 146, 122, 128, 28 }, {} },
+			{ "RightFBSlider1", { 257, 67, 70, 60 }, {} },
+			{ "RightFBLabel1", { 227, 122, 128, 28 }, {} }
+		   }
+		  },
+		  {
+		   "FilterPanel1", { 85, 89, 414, 308 }, 
+		   {
+			{ "FrequencyLabel1", { 8, 272, 128, 28 }, {} },
+			{ "FilterGraph1", { 16, 66, 380, 140 }, {} },
+			{ "FrequencySlider1", { 36, 217, 70, 60 }, {} },
+			{ "FilterTitle1", { 17, 16, 379, 38 }, {} },
+			{ "QLabel1", { 145, 272, 128, 28 }, {} },
+			{ "QSlider1", { 173, 217, 70, 60 }, {} },
+			{ "FilterSelector1", { 275, 234, 121, 32 }, {} },
+			{ "FilterEnabled1", { 17, 16, 379, 38 }, {} }
+		   }
+		  }
+		 }
+		},
+		{
+		 "FXTab2", { 500, 0, 515, 585 }, 
+		 {
+		  {
+		   "DelayPanel2", { 25, 416, 414, 158 }, 
+		   {
+			{ "DelayTitle2", { 17, 17, 381, 38 }, {} },
+			{ "LeftTimeLabel2", { -12, 122, 128, 28 }, {} },
+			{ "MixLabel2", { 318, 122, 108, 28 }, {} },
+			{ "MixSlider2", { 337, 67, 70, 60 }, {} },
+			{ "LeftTimeSlider2", { 19, 67, 70, 60 }, {} },
+			{ "RightTimeSlider2", { 98, 67, 70, 60 }, {} },
+			{ "RightTimeLabel2", { 70, 122, 128, 28 }, {} },
+			{ "DelayEnabled2", { 17, 17, 381, 38 }, {} },
+			{ "LeftFBSlider2", { 178, 67, 70, 60 }, {} },
+			{ "LeftFBLabel2", { 146, 122, 128, 28 }, {} },
+			{ "RightFBSlider2", { 257, 67, 70, 60 }, {} },
+			{ "RightFBLabel2", { 227, 122, 128, 28 }, {} }
+		   }
+		  },
+		  {
+		   "FilterPanel2", { 25, 89, 414, 308 }, 
+		   {
+			{ "FrequencyLabel2", { 8, 272, 128, 28 }, {} },
+			{ "FilterGraph2", { 16, 66, 380, 140 }, {} },
+			{ "FrequencySlider2", { 36, 217, 70, 60 }, {} },
+			{ "FilterTitle2", { 17, 16, 379, 38 }, {} },
+			{ "QLabel2", { 145, 272, 128, 28 }, {} },
+			{ "QSlider2", { 173, 217, 70, 60 }, {} },
+			{ "FilterSelector2", { 275, 234, 121, 32 }, {} },
+			{ "FilterEnabled2", { 17, 16, 379, 38 }, {} }
+		   }
+		  }
+		 }
+		}
+	   }
 	  }
 	 }
 	});
-	
+
 	p.apply(*this);
 	p.printSummary();
 }
@@ -402,10 +479,10 @@ void VCSOInterface::refreshKeyboardColours()
 		uint32 colour = 0x00000000;
 
 		if (isMapped(i, 0))
-			colour |= 0x00FF0000;
+			colour |= Tab::leftColour;
 
 		if (isMapped(i, 1))
-			colour |= 0x0000FFFF;
+			colour |= Tab::rightColour;
 
 		if (colour == 0)
 			colour = 0x77555555;
@@ -426,6 +503,7 @@ void VCSOInterface::showPage(Button* b)
 	editPage.setVisible(b == &editButton);
 	browsePage.setVisible(b == &browseButton);
 	settingsPage.setVisible(b == &settingsButton);
+	fxPage.setVisible(b == &fxButton);
 }
 
 /** This method needs to be implemented and your initial preset structure must be defined here. */
