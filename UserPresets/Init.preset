@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Preset Version="1.0.0">
+  <Content Processor="Interface">
+    <Control type="ScriptComboBox" id="InstrumentSelector1" value="2"/>
+    <Control type="ScriptSlider" id="ReleaseSlider1" value="900"/>
+    <Control type="ScriptSlider" id="ColourSlider1" value="0"/>
+    <Control type="ScriptTable" id="Table1" value="0" data="24...............vO...f+....9CLybtO"/>
+    <Control type="ScriptComboBox" id="InstrumentSelector2" value="2"/>
+    <Control type="ScriptSlider" id="ReleaseSlider2" value="933"/>
+    <Control type="ScriptSlider" id="ColourSlider2" value="0"/>
+    <Control type="ScriptTable" id="Table2" value="0" data="24...............vO...f+....9CMyLuO"/>
+    <Control type="ScriptSlider" id="MixSlider1" value="0.67000002"/>
+    <Control type="ScriptSlider" id="LeftTimeSlider1" value="11"/>
+    <Control type="ScriptSlider" id="RightTimeSlider1" value="9"/>
+    <Control type="ScriptPanel" id="DelayEnabled1" value="0"/>
+    <Control type="ScriptSlider" id="LeftFBSlider1" value="0.36000001"/>
+    <Control type="ScriptSlider" id="RightFBSlider1" value="0.43000001"/>
+    <Control type="ScriptSlider" id="FrequencySlider1" value="20000"/>
+    <Control type="ScriptSlider" id="QSlider1" value="0.5"/>
+    <Control type="ScriptComboBox" id="FilterSelector1" value="1"/>
+    <Control type="ScriptPanel" id="FilterEnabled1" value="1"/>
+    <Control type="ScriptSlider" id="MixSlider2" value="0.82999998"/>
+    <Control type="ScriptSlider" id="LeftTimeSlider2" value="10"/>
+    <Control type="ScriptSlider" id="RightTimeSlider2" value="11"/>
+    <Control type="ScriptPanel" id="DelayEnabled2" value="0"/>
+    <Control type="ScriptSlider" id="LeftFBSlider2" value="0.60000002"/>
+    <Control type="ScriptSlider" id="RightFBSlider2" value="0.43000001"/>
+    <Control type="ScriptSlider" id="FrequencySlider2" value="20000"/>
+    <Control type="ScriptSlider" id="QSlider2" value="0.5"/>
+    <Control type="ScriptComboBox" id="FilterSelector2" value="1"/>
+    <Control type="ScriptPanel" id="FilterEnabled2" value="1"/>
+  </Content>
+  <MidiAutomation>
+    <Controller Controller="1" Processor="Interface" MacroIndex="-1" Start="20"
+                End="20000" FullStart="20" FullEnd="20000" Skew="0.26631956"
+                Interval="0.01" Attribute="Background" Inverted="0"/>
+  </MidiAutomation>
+  <MPEData Enabled="0"/>
+</Preset>
