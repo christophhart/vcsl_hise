@@ -14,8 +14,7 @@ VCSLData::VCSLData(MainController* mc) :
         auto sampler = builder.create<ModulatorSampler>(mc->getMainSynthChain());
         sampler->setId("Sampler" + String(index+1));
   
-        auto envelope = builder.find<SimpleEnvelope>("DefaultEnvelope").getProcessor();
-        envelope->setId("DefaultEnvelope" + String(index + 1));
+        auto envelope = builder.find<SimpleEnvelope>("DefaultEnvelope" + String(index + 1)).getProcessor();
   
         auto velo = builder.create<hise::VelocityModulator>(sampler, raw::IDs::Chains::Gain);
         velo->setAttribute(VelocityModulator::UseTable, 1.0f, dontSendNotification);
