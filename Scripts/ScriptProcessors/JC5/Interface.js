@@ -82,13 +82,10 @@ inline function refreshKeys()
     {
         local c = 0x0000000;
         
-        local n1 = i - c1;
-        local n2 = i - c2;
-        
-        if(sampler1.isNoteNumberMapped(n1))
+        if(sampler1.isNoteNumberMapped(i))
             c |= 0x220077FF;
             
-        if(sampler2.isNoteNumberMapped(n2))
+        if(sampler2.isNoteNumberMapped(i))
             c |= 0x22FF8800;
         
         if(c == 0)
@@ -98,37 +95,7 @@ inline function refreshKeys()
     }
 }
 
-const var Background = Content.getComponent("Background");
-Background.setLoadingCallback(function(isPreloading)
-{
-	if(!isPreloading)
-	    refreshKeys();
-});
-
-
-const var ColourSlider1 = Content.getComponent("ColourSlider1");
-const var ColourSlider2 = Content.getComponent("ColourSlider2");
-
-var c1 = 0;
-var c2 = 0;
-
-Background.setTimerCallback(function()
-{
-    var dirty = false;
-    
-    if(ColourSlider1.getValue() != c1 ||
-       ColourSlider2.getValue() != c2)
-        dirty = true;
-        
-    c1 = ColourSlider1.getValue();
-    c2 = ColourSlider2.getValue();
-    
-    if(dirty)
-        refreshKeys();
-});
-
-Background.startTimer(100);
-
+refreshKeys();
 function onNoteOn()
 {
 	

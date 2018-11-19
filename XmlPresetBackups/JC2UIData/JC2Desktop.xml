@@ -3,20 +3,10 @@
 <ContentProperties DeviceType="Desktop">
   <Component type="ScriptPanel" id="Background" x="0" y="1" width="1024" height="768"
              borderSize="0" borderRadius="0" itemColour="4292730333" itemColour2="4290624957">
-    <Component type="ScriptFloatingTile" id="Keyboard" x="18" y="663" width="988"
-               height="108" ContentType="Keyboard" bgColour="4284769380" itemColour="436207615"
-               itemColour2="4294967295" textColour="4294951115" Data="{&#13;&#10;  &quot;KeyWidth&quot;: 19,&#13;&#10;  &quot;DisplayOctaveNumber&quot;: false,&#13;&#10;  &quot;LowKey&quot;: 21,&#13;&#10;  &quot;HiKey&quot;: 127,&#13;&#10;  &quot;CustomGraphics&quot;: false,&#13;&#10;  &quot;DefaultAppearance&quot;: false,&#13;&#10;  &quot;BlackKeyRatio&quot;: 0.69999999,&#13;&#10;  &quot;ToggleMode&quot;: false,&#13;&#10;  &quot;MidiChannel&quot;: 1,&#13;&#10;  &quot;UseVectorGraphics&quot;: true,&#13;&#10;  &quot;UseFlatStyle&quot;: false,&#13;&#10;  &quot;MPEKeyboard&quot;: false,&#13;&#10;  &quot;MPEStartChannel&quot;: 2,&#13;&#10;  &quot;MPEEndChannel&quot;: 16&#13;&#10;}"
-               parentComponent="Background"/>
     <Component type="ScriptImage" id="HiseLogo" x="956" y="15" fileName="{PROJECT_FOLDER}VCSL_Color_600x600.png"
                alpha="0.80000001" parentComponent="Background"/>
     <Component type="ScriptImage" id="VCSLLogo" x="15" y="12" fileName="{PROJECT_FOLDER}logo_new.png"
                alpha="0.80000001" parentComponent="Background"/>
-    <Component type="ScriptPanel" id="EditButton" x="197" y="600" allowCallbacks="Clicks &amp; Hover"
-               textColour="4282598211" parentComponent="Background" bgColour="452984832"
-               width="110"/>
-    <Component type="ScriptPanel" id="BrowseButton" x="540" y="600" allowCallbacks="Clicks &amp; Hover"
-               textColour="4282598211" parentComponent="Background" bgColour="452984832"
-               width="110"/>
     <Component type="ScriptLabel" id="Title" x="85" y="20" width="853" height="39"
                fontStyle="Bold" text="VCSL - HISE Edition" bgColour="335544320"
                fontSize="29" saveInPreset="0" editable="0" fontName="Oxygen"
@@ -37,7 +27,7 @@
           <Component type="ScriptComboBox" id="InstrumentSelector1" x="111" y="83"
                      width="181" text="Select Instrument" bgColour="16777215" itemColour="288568115"
                      itemColour2="537989393" textColour="4278190080" parentComponent="InstrumentPanel1"
-                     items="Glockenspiel&#10;Marimba&#10;Organ" max="3"/>
+                     items="&#10;" max="0"/>
           <Component type="ScriptLabel" id="ColourLabel1" x="-12" y="122" text="Colour"
                      fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
                      parentComponent="InstrumentPanel1"/>
@@ -46,20 +36,17 @@
                      parentComponent="InstrumentPanel1"/>
           <Component type="ScriptSlider" id="ReleaseSlider1" x="334" y="66" width="70"
                      height="60" parentComponent="InstrumentPanel1" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" processorId="Simple Envelope" parameterId="Release"
-                     mode="Time" max="20000" stepSize="1" suffix=" ms" middlePosition="1000"
-                     showValuePopup="Right" isPluginParameter="1" pluginParameterName="Release 1"/>
+                     numStrips="100"/>
           <Component type="ScriptSlider" id="ColourSlider1" x="16" y="67" width="70"
                      height="60" parentComponent="InstrumentPanel1" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" max="12" stepSize="1" suffix=" ms" middlePosition="0"
-                     showValuePopup="Right" min="-12" isPluginParameter="1" pluginParameterName="Colour 1"/>
+                     numStrips="100"/>
         </Component>
         <Component type="ScriptPanel" id="VelocityPanel1" x="85" y="269" width="414"
                    height="308" parentComponent="Tab1" borderRadius="3" itemColour="486539264"
                    itemColour2="335544320" bgColour="16777215" borderSize="0">
           <Component type="ScriptTable" id="Table1" x="18" y="69" height="216" width="377"
                      customColours="1" bgColour="1447446" itemColour="570456063" itemColour2="4217331551"
-                     processorId="Velocity Modulator" parentComponent="VelocityPanel1"/>
+                     parentComponent="VelocityPanel1"/>
           <Component type="ScriptLabel" id="VelocityTitle1" x="17" y="17" width="379"
                      height="38" fontStyle="Bold" text="Velocity A" bgColour="335544320"
                      fontSize="18" saveInPreset="0" editable="0" fontName="Oxygen"
@@ -79,29 +66,26 @@
           <Component type="ScriptComboBox" id="InstrumentSelector2" x="111" y="83"
                      width="181" text="Select Instrument" bgColour="16777215" itemColour="288568115"
                      itemColour2="537989393" textColour="4278190080" parentComponent="InstrumentPanel2"
-                     items="Glockenspiel&#10;Marimba&#10;Organ" max="3"/>
+                     items="&#10;" max="0"/>
           <Component type="ScriptLabel" id="ReleaseLabel2" x="306" y="121" text="Release"
-                     fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
-                     parentComponent="InstrumentPanel2"/>
-          <Component type="ScriptSlider" id="ReleaseSlider2" x="334" y="66" width="70"
-                     height="60" parentComponent="InstrumentPanel2" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" processorId="Simple Envelope 2" parameterId="Release"
-                     mode="Time" max="20000" stepSize="1" suffix=" ms" middlePosition="1000"
-                     showValuePopup="Right" isPluginParameter="1" pluginParameterName="Release 2"/>
-          <Component type="ScriptLabel" id="ColourLabel2" x="-12" y="122" text="Colour"
                      fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
                      parentComponent="InstrumentPanel2"/>
           <Component type="ScriptSlider" id="ColourSlider2" x="16" y="67" width="70"
                      height="60" parentComponent="InstrumentPanel2" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" max="12" stepSize="1" suffix=" ms" middlePosition="0"
-                     showValuePopup="Right" min="-12" isPluginParameter="1" pluginParameterName="Colour 2"/>
+                     numStrips="100"/>
+          <Component type="ScriptLabel" id="ColourLabel2" x="-12" y="122" text="Colour"
+                     fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
+                     parentComponent="InstrumentPanel2"/>
+          <Component type="ScriptSlider" id="ReleaseSlider2" x="334" y="66" width="70"
+                     height="60" parentComponent="InstrumentPanel2" filmstripImage="{PROJECT_FOLDER}Strip.png"
+                     numStrips="100"/>
         </Component>
         <Component type="ScriptPanel" id="VelocityPanel2" x="17" y="269" width="414"
                    height="308" parentComponent="Tab2" borderRadius="3" itemColour="486539264"
                    itemColour2="335544320" bgColour="16777215" borderSize="0">
           <Component type="ScriptTable" id="Table2" x="18" y="69" height="216" width="377"
                      customColours="1" bgColour="1447446" itemColour="587171840" itemColour2="4216936793"
-                     processorId="Velocity Modulator 2" parentComponent="VelocityPanel2"/>
+                     parentComponent="VelocityPanel2"/>
           <Component type="ScriptLabel" id="VelocityTitle2" x="17" y="17" width="380"
                      height="38" fontStyle="Bold" text="Velocity B" bgColour="335544320"
                      fontSize="18" saveInPreset="0" editable="0" fontName="Oxygen"
@@ -109,50 +93,6 @@
         </Component>
       </Component>
     </Component>
-    <Component type="ScriptPanel" id="BrowsePage" x="-1" y="-1" width="1034"
-               height="588" parentComponent="Background" itemColour="0" itemColour2="0"
-               textColour="16777215" bgColour="16777215" visible="0">
-      <Component type="ScriptPanel" id="PresetBrowserBg" x="85" y="97" width="855"
-                 height="478" parentComponent="BrowsePage" borderRadius="3" borderSize="0"
-                 bgColour="16777215" itemColour="486539264" itemColour2="335544320">
-        <Component type="ScriptFloatingTile" id="PresetBrowser" x="17" y="18" width="823"
-                   height="443" parentComponent="PresetBrowserBg" bgColour="0" itemColour="4283124555"
-                   itemColour2="4294951115" Data="{&#13;&#10;  &quot;ShowSaveButton&quot;: true,&#13;&#10;  &quot;ShowFolderButton&quot;: true,&#13;&#10;  &quot;ShowNotes&quot;: false,&#13;&#10;  &quot;ShowEditButtons&quot;: true,&#13;&#10;  &quot;ShowFavoriteIcon&quot;: false,&#13;&#10;  &quot;NumColumns&quot;: 1&#13;&#10;}"
-                   textColour="4282927176" ContentType="PresetBrowser" FontSize="15"/>
-      </Component>
-    </Component>
-    <Component type="ScriptPanel" id="SettingsButton" x="712" y="600" allowCallbacks="Clicks &amp; Hover"
-               textColour="4282598211" parentComponent="Background" bgColour="452984832"
-               width="110"/>
-    <Component type="ScriptPanel" id="SettingsPage" x="0" y="1" width="1034"
-               height="588" parentComponent="Background" bgColour="16777215"
-               itemColour="0" itemColour2="0" textColour="16777215" visible="0">
-      <Component type="ScriptPanel" id="SettingsBg" x="85" y="97" width="855"
-                 height="478" parentComponent="SettingsPage" bgColour="16777215"
-                 itemColour="486539264" itemColour2="335544320" borderSize="0"
-                 borderRadius="3">
-        <Component type="ScriptLabel" id="AudioSettingsLabel" x="17" y="22" width="400"
-                   height="38" fontStyle="Bold" text="Audio Settings" bgColour="335544320"
-                   fontSize="18" saveInPreset="0" editable="0" fontName="Oxygen"
-                   parentComponent="SettingsBg" textColour="4284045657"/>
-        <Component type="ScriptFloatingTile" id="Settings" x="45" y="62" width="374"
-                   height="388" parentComponent="SettingsBg" ContentType="CustomSettings"
-                   bgColour="4278190080" itemColour="4294951115" itemColour2="4294951115"
-                   Data="{&#13;&#10;  &quot;Driver&quot;: true,&#13;&#10;  &quot;Device&quot;: true,&#13;&#10;  &quot;Output&quot;: true,&#13;&#10;  &quot;BufferSize&quot;: true,&#13;&#10;  &quot;SampleRate&quot;: true,&#13;&#10;  &quot;GlobalBPM&quot;: false,&#13;&#10;  &quot;StreamingMode&quot;: false,&#13;&#10;  &quot;GraphicRendering&quot;: false,&#13;&#10;  &quot;ScaleFactor&quot;: true,&#13;&#10;  &quot;SustainCC&quot;: false,&#13;&#10;  &quot;VoiceAmountMultiplier&quot;: false,&#13;&#10;  &quot;ClearMidiCC&quot;: false,&#13;&#10;  &quot;SampleLocation&quot;: true,&#13;&#10;  &quot;DebugMode&quot;: true,&#13;&#10;  &quot;ScaleFactorList&quot;: [&#13;&#10;    0.5,&#13;&#10;    0.75,&#13;&#10;    1,&#13;&#10;    1.25,&#13;&#10;    1.5,&#13;&#10;    2&#13;&#10;  ]&#13;&#10;}"
-                   textColour="4283585106"/>
-        <Component type="ScriptFloatingTile" id="MidiSources" x="465" y="73" width="330"
-                   height="321" parentComponent="SettingsBg" ContentType="MidiSources"
-                   bgColour="4278190080" itemColour="4294951115" itemColour2="4294951115"
-                   Data="{&#13;&#10;}" textColour="4283979864"/>
-        <Component type="ScriptLabel" id="MIDILabel" x="434" y="22" width="400"
-                   height="38" fontStyle="Bold" text="MIDI Sources" bgColour="335544320"
-                   fontSize="18" saveInPreset="0" editable="0" fontName="Oxygen"
-                   parentComponent="SettingsBg" textColour="4284045657"/>
-      </Component>
-    </Component>
-    <Component type="ScriptPanel" id="FXButton" x="368" y="600" allowCallbacks="Clicks &amp; Hover"
-               textColour="4282598211" parentComponent="Background" bgColour="452984832"
-               width="110"/>
     <Component type="ScriptPanel" id="FXPage" x="0" y="0" width="1034" height="588"
                parentComponent="Background" itemColour="0" itemColour2="0" textColour="16777215"
                bgColour="16777215" visible="0">
@@ -172,40 +112,33 @@
           <Component type="ScriptLabel" id="MixLabel1" x="318" y="122" text="Mix"
                      fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
                      parentComponent="DelayPanel1" width="108"/>
+          <Component type="ScriptSlider" id="RightFBSlider1" x="257" y="67" width="70"
+                     height="60" parentComponent="DelayPanel1" filmstripImage="{PROJECT_FOLDER}Strip.png"
+                     numStrips="100"/>
           <Component type="ScriptSlider" id="MixSlider1" x="337" y="67" width="70"
                      height="60" parentComponent="DelayPanel1" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" processorId="Delay1" parameterId="Mix" showValuePopup="Right"
-                     mode="NormalizedPercentage" suffix="%" middlePosition="0.5" isPluginParameter="1"
-                     pluginParameterName="Mix 1"/>
+                     numStrips="100"/>
           <Component type="ScriptSlider" id="LeftTimeSlider1" x="19" y="67" width="70"
                      height="60" parentComponent="DelayPanel1" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" showValuePopup="Right" processorId="Delay1" parameterId="DelayTimeLeft"
-                     mode="TempoSync" max="18" stepSize="1" middlePosition="9"/>
+                     numStrips="100"/>
+          <Component type="ScriptLabel" id="RightTimeLabel1" x="70" y="122" text="Right Time"
+                     fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
+                     parentComponent="DelayPanel1"/>
           <Component type="ScriptSlider" id="RightTimeSlider1" x="98" y="67" width="70"
                      height="60" parentComponent="DelayPanel1" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" showValuePopup="Right" processorId="Delay1" parameterId="DelayTimeRight"
-                     mode="TempoSync" max="18" stepSize="1" middlePosition="9"/>
-          <Component type="ScriptLabel" id="RightTimeLabel1" x="70" y="122" text="Right Time"
+                     numStrips="100"/>
+          <Component type="ScriptLabel" id="LeftFBLabel1" x="146" y="122" text="Left FB"
+                     fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
+                     parentComponent="DelayPanel1"/>
+          <Component type="ScriptSlider" id="LeftFBSlider1" x="178" y="67" width="70"
+                     height="60" parentComponent="DelayPanel1" filmstripImage="{PROJECT_FOLDER}Strip.png"
+                     numStrips="100"/>
+          <Component type="ScriptLabel" id="RightFBLabel1" x="227" y="122" text="Right FB"
                      fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
                      parentComponent="DelayPanel1"/>
           <Component type="ScriptPanel" id="DelayEnabled1" x="17" y="17" width="381"
                      height="38" parentComponent="DelayPanel1" allowCallbacks="Clicks &amp; Hover"
-                     saveInPreset="1" stepSize="1" processorId="Delay1" parameterId="Enabled"/>
-          <Component type="ScriptSlider" id="LeftFBSlider1" x="178" y="67" width="70"
-                     height="60" parentComponent="DelayPanel1" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" showValuePopup="Right" processorId="Delay1" parameterId="FeedbackLeft"
-                     mode="NormalizedPercentage" suffix="%" middlePosition="0.5"/>
-          <Component type="ScriptLabel" id="LeftFBLabel1" x="146" y="122" text="Left FB"
-                     fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
-                     parentComponent="DelayPanel1"/>
-          <Component type="ScriptSlider" id="RightFBSlider1" x="257" y="67" width="70"
-                     height="60" parentComponent="DelayPanel1" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" processorId="Delay1" parameterId="FeedbackRight"
-                     showValuePopup="Right" mode="NormalizedPercentage" suffix="%"
-                     middlePosition="0.5"/>
-          <Component type="ScriptLabel" id="RightFBLabel1" x="227" y="122" text="Right FB"
-                     fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
-                     parentComponent="DelayPanel1"/>
+                     saveInPreset="1" stepSize="1"/>
         </Component>
         <Component type="ScriptPanel" id="FilterPanel1" x="85" y="89" width="414"
                    height="308" parentComponent="FXTab1" borderRadius="3" itemColour="486539264"
@@ -215,13 +148,11 @@
                      parentComponent="FilterPanel1"/>
           <Component type="ScriptFloatingTile" id="FilterGraph1" x="16" y="66" width="380"
                      height="140" ContentType="FilterDisplay" bgColour="3355443" itemColour="4284374622"
-                     itemColour2="570456063" Data="{&#13;&#10;  &quot;ProcessorId&quot;: &quot;Filter1&quot;,&#13;&#10;  &quot;Index&quot;: -1&#13;&#10;}"
+                     itemColour2="570456063" Data="{&#13;&#10;  &quot;ProcessorId&quot;: &quot;&quot;,&#13;&#10;  &quot;Index&quot;: -1&#13;&#10;}"
                      parentComponent="FilterPanel1"/>
           <Component type="ScriptSlider" id="FrequencySlider1" x="36" y="217" width="70"
                      height="60" parentComponent="FilterPanel1" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" showValuePopup="Right" mode="Frequency" min="20"
-                     max="20000" stepSize="1" suffix=" Hz" middlePosition="1500" processorId="Filter1"
-                     parameterId="Frequency" isPluginParameter="1" pluginParameterName="Frequency 1"/>
+                     numStrips="100"/>
           <Component type="ScriptLabel" id="FilterTitle1" x="17" y="16" width="379"
                      height="38" fontStyle="Bold" text="Filter A" bgColour="335544320"
                      fontSize="18" saveInPreset="0" editable="0" fontName="Oxygen"
@@ -230,15 +161,14 @@
                      textColour="4278190080" saveInPreset="0" editable="0" parentComponent="FilterPanel1"/>
           <Component type="ScriptSlider" id="QSlider1" x="173" y="217" width="70"
                      height="60" parentComponent="FilterPanel1" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" showValuePopup="Right" min="0.5" max="8" middlePosition="1"
-                     processorId="Filter1" parameterId="Q" isPluginParameter="1" pluginParameterName="Q 1"/>
+                     numStrips="100"/>
           <Component type="ScriptComboBox" id="FilterSelector1" x="275" y="234" width="121"
                      text="Select Instrument" bgColour="16777215" itemColour="288568115"
                      itemColour2="537989393" textColour="4278190080" parentComponent="FilterPanel1"
                      items="Low Pass&#10;High Pass&#10;Allpass" max="3"/>
           <Component type="ScriptPanel" id="FilterEnabled1" x="17" y="16" width="379"
                      height="38" parentComponent="FilterPanel1" allowCallbacks="Clicks &amp; Hover"
-                     saveInPreset="1" stepSize="1" processorId="Filter1" parameterId="Enabled"/>
+                     saveInPreset="1" stepSize="1"/>
         </Component>
       </Component>
       <Component type="ScriptPanel" id="FXTab2" x="500" y="0" width="515" height="585"
@@ -257,40 +187,33 @@
           <Component type="ScriptLabel" id="MixLabel2" x="318" y="122" text="Mix"
                      fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
                      parentComponent="DelayPanel2" width="108"/>
+          <Component type="ScriptSlider" id="RightFBSlider2" x="257" y="67" width="70"
+                     height="60" parentComponent="DelayPanel2" filmstripImage="{PROJECT_FOLDER}Strip.png"
+                     numStrips="100"/>
           <Component type="ScriptSlider" id="MixSlider2" x="337" y="67" width="70"
                      height="60" parentComponent="DelayPanel2" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" processorId="Delay2" parameterId="Mix" showValuePopup="Right"
-                     mode="NormalizedPercentage" suffix="%" middlePosition="0.5" isPluginParameter="1"
-                     pluginParameterName="Mix 2"/>
+                     numStrips="100"/>
           <Component type="ScriptSlider" id="LeftTimeSlider2" x="19" y="67" width="70"
                      height="60" parentComponent="DelayPanel2" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" showValuePopup="Right" processorId="Delay2" parameterId="DelayTimeLeft"
-                     mode="TempoSync" max="18" stepSize="1" middlePosition="9"/>
+                     numStrips="100"/>
+          <Component type="ScriptLabel" id="RightTimeLabel2" x="70" y="122" text="Right Time"
+                     fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
+                     parentComponent="DelayPanel2"/>
           <Component type="ScriptSlider" id="RightTimeSlider2" x="98" y="67" width="70"
                      height="60" parentComponent="DelayPanel2" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" showValuePopup="Right" processorId="Delay2" parameterId="DelayTimeRight"
-                     mode="TempoSync" max="18" stepSize="1" middlePosition="9"/>
-          <Component type="ScriptLabel" id="RightTimeLabel2" x="70" y="122" text="Right Time"
+                     numStrips="100"/>
+          <Component type="ScriptLabel" id="LeftFBLabel2" x="146" y="122" text="Left FB"
+                     fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
+                     parentComponent="DelayPanel2"/>
+          <Component type="ScriptSlider" id="LeftFBSlider2" x="178" y="67" width="70"
+                     height="60" parentComponent="DelayPanel2" filmstripImage="{PROJECT_FOLDER}Strip.png"
+                     numStrips="100"/>
+          <Component type="ScriptLabel" id="RightFBLabel2" x="227" y="122" text="Right FB"
                      fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
                      parentComponent="DelayPanel2"/>
           <Component type="ScriptPanel" id="DelayEnabled2" x="17" y="17" width="381"
                      height="38" parentComponent="DelayPanel2" allowCallbacks="Clicks &amp; Hover"
-                     saveInPreset="1" stepSize="1" processorId="Delay2" parameterId="Enabled"/>
-          <Component type="ScriptSlider" id="LeftFBSlider2" x="178" y="67" width="70"
-                     height="60" parentComponent="DelayPanel2" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" showValuePopup="Right" processorId="Delay2" parameterId="FeedbackLeft"
-                     mode="NormalizedPercentage" suffix="%" middlePosition="0.5"/>
-          <Component type="ScriptLabel" id="LeftFBLabel2" x="146" y="122" text="Left FB"
-                     fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
-                     parentComponent="DelayPanel2"/>
-          <Component type="ScriptSlider" id="RightFBSlider2" x="257" y="67" width="70"
-                     height="60" parentComponent="DelayPanel2" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" processorId="Delay2" parameterId="FeedbackRight"
-                     showValuePopup="Right" mode="NormalizedPercentage" suffix="%"
-                     middlePosition="0.5"/>
-          <Component type="ScriptLabel" id="RightFBLabel2" x="227" y="122" text="Right FB"
-                     fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
-                     parentComponent="DelayPanel2"/>
+                     saveInPreset="1" stepSize="1"/>
         </Component>
         <Component type="ScriptPanel" id="FilterPanel2" x="25" y="89" width="414"
                    height="308" parentComponent="FXTab2" borderRadius="3" itemColour="486539264"
@@ -300,32 +223,61 @@
                      parentComponent="FilterPanel2"/>
           <Component type="ScriptFloatingTile" id="FilterGraph2" x="16" y="66" width="380"
                      height="140" ContentType="FilterDisplay" bgColour="3355443" itemColour="4284374622"
-                     itemColour2="587171840" Data="{&#13;&#10;  &quot;ProcessorId&quot;: &quot;Filter2&quot;,&#13;&#10;  &quot;Index&quot;: -1&#13;&#10;}"
+                     itemColour2="587171840" Data="{&#13;&#10;  &quot;ProcessorId&quot;: &quot;&quot;,&#13;&#10;  &quot;Index&quot;: -1&#13;&#10;}"
                      parentComponent="FilterPanel2"/>
-          <Component type="ScriptSlider" id="FrequencySlider2" x="36" y="217" width="70"
+          <Component type="ScriptSlider" id="QSlider2" x="173" y="217" width="70"
                      height="60" parentComponent="FilterPanel2" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" showValuePopup="Right" mode="Frequency" min="20"
-                     max="20000" stepSize="1" suffix=" Hz" middlePosition="1500" processorId="Filter2"
-                     parameterId="Frequency" isPluginParameter="1" pluginParameterName="Frequency 2"/>
+                     numStrips="100"/>
           <Component type="ScriptLabel" id="FilterTitle2" x="17" y="16" width="379"
                      height="38" fontStyle="Bold" text="Filter B" bgColour="335544320"
                      fontSize="18" saveInPreset="0" editable="0" fontName="Oxygen"
                      parentComponent="FilterPanel2" textColour="4284045657"/>
           <Component type="ScriptLabel" id="QLabel2" x="145" y="272" text="Q" fontName="Oxygen"
                      textColour="4278190080" saveInPreset="0" editable="0" parentComponent="FilterPanel2"/>
-          <Component type="ScriptSlider" id="QSlider2" x="173" y="217" width="70"
+          <Component type="ScriptSlider" id="FrequencySlider2" x="36" y="217" width="70"
                      height="60" parentComponent="FilterPanel2" filmstripImage="{PROJECT_FOLDER}Strip.png"
-                     numStrips="100" showValuePopup="Right" min="0.5" max="8" middlePosition="1"
-                     processorId="Filter2" parameterId="Q" isPluginParameter="1" pluginParameterName="Q 2"/>
+                     numStrips="100"/>
           <Component type="ScriptComboBox" id="FilterSelector2" x="275" y="234" width="121"
                      text="Select Instrument" bgColour="16777215" itemColour="288568115"
                      itemColour2="537989393" textColour="4278190080" parentComponent="FilterPanel2"
                      items="Low Pass&#10;High Pass&#10;Allpass" max="3"/>
           <Component type="ScriptPanel" id="FilterEnabled2" x="17" y="16" width="379"
                      height="38" parentComponent="FilterPanel2" allowCallbacks="Clicks &amp; Hover"
-                     saveInPreset="1" stepSize="1" processorId="Filter2" parameterId="Enabled"/>
+                     saveInPreset="1" stepSize="1"/>
         </Component>
       </Component>
     </Component>
+    <Component type="ScriptPanel" id="BrowsePage" x="-1" y="-1" width="1034"
+               height="588" parentComponent="Background" itemColour="0" itemColour2="0"
+               textColour="16777215" bgColour="16777215" visible="0">
+      <Component type="ScriptPanel" id="PresetBrowserBg" x="85" y="97" width="855"
+                 height="478" parentComponent="BrowsePage" borderRadius="3" borderSize="0"
+                 bgColour="16777215" itemColour="486539264" itemColour2="335544320"/>
+    </Component>
+    <Component type="ScriptPanel" id="SettingsPage" x="0" y="1" width="1034"
+               height="588" parentComponent="Background" bgColour="16777215"
+               itemColour="0" itemColour2="0" textColour="16777215" visible="0">
+      <Component type="ScriptPanel" id="SettingsBg" x="85" y="97" width="855"
+                 height="478" parentComponent="SettingsPage" bgColour="16777215"
+                 itemColour="486539264" itemColour2="335544320" borderSize="0"
+                 borderRadius="3">
+        <Component type="ScriptFloatingTile" id="MidiSources" x="465" y="73" width="330"
+                   height="321" parentComponent="SettingsBg" ContentType="MidiSources"
+                   bgColour="4278190080" itemColour="4294951115" itemColour2="4294951115"
+                   Data="{&#13;&#10;}" textColour="4283979864"/>
+      </Component>
+    </Component>
+    <Component type="ScriptPanel" id="EditButton" x="197" y="600" allowCallbacks="Clicks &amp; Hover"
+               textColour="4282598211" bgColour="452984832" width="110" parentComponent="Background"/>
+    <Component type="ScriptPanel" id="FXButton" x="368" y="600" allowCallbacks="Clicks &amp; Hover"
+               textColour="4282598211" bgColour="452984832" width="110" parentComponent="Background"/>
+    <Component type="ScriptPanel" id="BrowseButton" x="540" y="600" allowCallbacks="Clicks &amp; Hover"
+               textColour="4282598211" bgColour="452984832" width="110" parentComponent="Background"/>
+    <Component type="ScriptPanel" id="SettingsButton" x="712" y="600" allowCallbacks="Clicks &amp; Hover"
+               textColour="4282598211" bgColour="452984832" width="110" parentComponent="Background"/>
+    <Component type="ScriptFloatingTile" id="Keyboard" x="18" y="663" width="988"
+               height="108" ContentType="Keyboard" bgColour="4284769380" itemColour="436207615"
+               itemColour2="4294967295" textColour="4294951115" Data="{&#13;&#10;  &quot;KeyWidth&quot;: 19,&#13;&#10;  &quot;DisplayOctaveNumber&quot;: false,&#13;&#10;  &quot;LowKey&quot;: 21,&#13;&#10;  &quot;HiKey&quot;: 127,&#13;&#10;  &quot;CustomGraphics&quot;: false,&#13;&#10;  &quot;DefaultAppearance&quot;: false,&#13;&#10;  &quot;BlackKeyRatio&quot;: 0.69999999,&#13;&#10;  &quot;ToggleMode&quot;: false,&#13;&#10;  &quot;MidiChannel&quot;: 1,&#13;&#10;  &quot;UseVectorGraphics&quot;: true,&#13;&#10;  &quot;UseFlatStyle&quot;: false,&#13;&#10;  &quot;MPEKeyboard&quot;: false,&#13;&#10;  &quot;MPEStartChannel&quot;: 2,&#13;&#10;  &quot;MPEEndChannel&quot;: 16&#13;&#10;}"
+               parentComponent="Background"/>
   </Component>
 </ContentProperties>

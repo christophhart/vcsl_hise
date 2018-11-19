@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Processor Type="SynthChain" ID="VCSL" Bypassed="0" Gain="1" Balance="0"
+<Processor Type="SynthChain" ID="JC2" Bypassed="0" Gain="1" Balance="0"
            VoiceLimit="64" KillFadeTime="20" IconColour="0" packageName=""
            BuildVersion="650">
   <ChildProcessors>
@@ -10,35 +10,35 @@
           <ChildProcessors/>
           <Content>
             <Control type="ScriptComboBox" id="InstrumentSelector1" value="3"/>
-            <Control type="ScriptSlider" id="ReleaseSlider1" value="490"/>
+            <Control type="ScriptSlider" id="ReleaseSlider1" value="0.40000001"/>
             <Control type="ScriptSlider" id="ColourSlider1" value="-2"/>
-            <Control type="ScriptTable" id="Table1" value="0" data="24...............vO...f+....9CLybqO"/>
+            <Control type="ScriptTable" id="Table1" value="0" data="24...............vO...f+....9CIyjuO"/>
             <Control type="ScriptComboBox" id="InstrumentSelector2" value="3"/>
-            <Control type="ScriptSlider" id="ReleaseSlider2" value="5194"/>
             <Control type="ScriptSlider" id="ColourSlider2" value="0"/>
-            <Control type="ScriptTable" id="Table2" value="0" data="24...............vO...f+....9ilYVvO"/>
+            <Control type="ScriptSlider" id="ReleaseSlider2" value="5194"/>
+            <Control type="ScriptTable" id="Table2" value="0" data="24...............vO...f+....9iYlQvO"/>
+            <Control type="ScriptSlider" id="RightFBSlider1" value="0.5"/>
             <Control type="ScriptSlider" id="MixSlider1" value="0.67000002"/>
-            <Control type="ScriptSlider" id="LeftTimeSlider1" value="11"/>
-            <Control type="ScriptSlider" id="RightTimeSlider1" value="9"/>
+            <Control type="ScriptSlider" id="LeftTimeSlider1" value="10"/>
+            <Control type="ScriptSlider" id="RightTimeSlider1" value="12"/>
+            <Control type="ScriptSlider" id="LeftFBSlider1" value="0"/>
             <Control type="ScriptPanel" id="DelayEnabled1" value="0"/>
-            <Control type="ScriptSlider" id="LeftFBSlider1" value="0.36000001"/>
-            <Control type="ScriptSlider" id="RightFBSlider1" value="0.43000001"/>
-            <Control type="ScriptSlider" id="FrequencySlider1" value="593"/>
+            <Control type="ScriptSlider" id="FrequencySlider1" value="0.60000002"/>
             <Control type="ScriptSlider" id="QSlider1" value="3.3199999"/>
             <Control type="ScriptComboBox" id="FilterSelector1" value="1"/>
             <Control type="ScriptPanel" id="FilterEnabled1" value="0"/>
+            <Control type="ScriptSlider" id="RightFBSlider2" value="0.43000001"/>
             <Control type="ScriptSlider" id="MixSlider2" value="0.82999998"/>
             <Control type="ScriptSlider" id="LeftTimeSlider2" value="10"/>
             <Control type="ScriptSlider" id="RightTimeSlider2" value="11"/>
+            <Control type="ScriptSlider" id="LeftFBSlider2" value="0"/>
             <Control type="ScriptPanel" id="DelayEnabled2" value="0"/>
-            <Control type="ScriptSlider" id="LeftFBSlider2" value="0.60000002"/>
-            <Control type="ScriptSlider" id="RightFBSlider2" value="0.43000001"/>
-            <Control type="ScriptSlider" id="FrequencySlider2" value="2282"/>
             <Control type="ScriptSlider" id="QSlider2" value="1.5700001"/>
+            <Control type="ScriptSlider" id="FrequencySlider2" value="2282"/>
             <Control type="ScriptComboBox" id="FilterSelector2" value="1"/>
             <Control type="ScriptPanel" id="FilterEnabled2" value="0"/>
           </Content>
-          <UIData Source="VCSLUIData"/>
+          <UIData Source="JC2UIData"/>
         </Processor>
       </ChildProcessors>
     </Processor>
@@ -79,11 +79,11 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1">
           <ChildProcessors>
-            <Processor Type="Velocity" ID="Velocity Modulator" Bypassed="0" Intensity="1"
-                       UseTable="1" Inverted="0" DecibelMode="0" VelocityTableData="24...............vO...f+....9CLybqO">
+            <Processor Type="Velocity" ID="Velocity1" Bypassed="0" Intensity="1" UseTable="1"
+                       Inverted="0" DecibelMode="0" VelocityTableData="24...............vO...f+....9CLybqO">
               <ChildProcessors/>
             </Processor>
-            <Processor Type="SimpleEnvelope" ID="Simple Envelope" Bypassed="0" Monophonic="0"
+            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope1" Bypassed="0" Monophonic="0"
                        Retrigger="1" Intensity="1" Attack="21" Release="490" LinearMode="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
@@ -100,7 +100,7 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="Filter1" Bypassed="1" Gain="0" Frequency="593"
-                       Q="3.3199999" Mode="6" Quality="218" BipolarIntensity="0">
+                       Q="3.3199999" Mode="6" Quality="8723616" BipolarIntensity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1">
@@ -123,8 +123,8 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Delay" ID="Delay1" Bypassed="1" DelayTimeLeft="11" DelayTimeRight="9"
-                       FeedbackLeft="0.36000001" FeedbackRight="0.43000001" LowPassFreq="20000"
+            <Processor Type="Delay" ID="Delay1" Bypassed="1" DelayTimeLeft="10" DelayTimeRight="12"
+                       FeedbackLeft="0" FeedbackRight="0.43000001" LowPassFreq="20000"
                        HiPassFreq="40" Mix="0.67000002" TempoSync="1">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
@@ -143,7 +143,7 @@
         <channelData enabled="1" level="0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="Sampler2" Bypassed="1" Gain="1" Balance="0"
+    <Processor Type="StreamingSampler" ID="Sampler2" Bypassed="0" Gain="1" Balance="0"
                VoiceLimit="256" KillFadeTime="20" IconColour="0" PreloadSize="8192"
                BufferSize="4096" VoiceAmount="256" SamplerRepeatMode="3" RRGroupAmount="1"
                PitchTracking="1" OneShot="0" CrossfadeGroups="0" Purged="0"
@@ -171,11 +171,11 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1">
           <ChildProcessors>
-            <Processor Type="Velocity" ID="Velocity Modulator 2" Bypassed="0" Intensity="1"
-                       UseTable="1" Inverted="0" DecibelMode="0" VelocityTableData="24...............vO...f+....9ilYVvO">
+            <Processor Type="Velocity" ID="Velocity2" Bypassed="0" Intensity="1" UseTable="1"
+                       Inverted="0" DecibelMode="0" VelocityTableData="24...............vO...f+....9ilYVvO">
               <ChildProcessors/>
             </Processor>
-            <Processor Type="SimpleEnvelope" ID="Simple Envelope 2" Bypassed="0" Monophonic="0"
+            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope2" Bypassed="0" Monophonic="0"
                        Retrigger="1" Intensity="1" Attack="21" Release="5194" LinearMode="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
@@ -192,7 +192,7 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="Filter2" Bypassed="1" Gain="0" Frequency="2282"
-                       Q="1.5700001" Mode="6" Quality="-1.0904044e+09" BipolarIntensity="0">
+                       Q="1.5700001" Mode="6" Quality="8756160" BipolarIntensity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1">
@@ -216,7 +216,7 @@
               </ChildProcessors>
             </Processor>
             <Processor Type="Delay" ID="Delay2" Bypassed="1" DelayTimeLeft="10" DelayTimeRight="11"
-                       FeedbackLeft="0.60000002" FeedbackRight="0.43000001" LowPassFreq="20000"
+                       FeedbackLeft="0" FeedbackRight="0.43000001" LowPassFreq="20000"
                        HiPassFreq="40" Mix="0.82999998" TempoSync="1">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>

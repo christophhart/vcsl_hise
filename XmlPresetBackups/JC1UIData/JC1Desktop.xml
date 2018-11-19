@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptPanel" id="Background" x="0" y="1" width="1024" height="768"
+             borderSize="0" borderRadius="0" itemColour="4292730333" itemColour2="4290624957">
+    <Component type="ScriptFloatingTile" id="Keyboard" x="18" y="663" width="988"
+               height="108" ContentType="Keyboard" bgColour="4284769380" itemColour="436207615"
+               itemColour2="4294967295" textColour="4294951115" Data="{&#13;&#10;  &quot;KeyWidth&quot;: 19,&#13;&#10;  &quot;DisplayOctaveNumber&quot;: false,&#13;&#10;  &quot;LowKey&quot;: 21,&#13;&#10;  &quot;HiKey&quot;: 127,&#13;&#10;  &quot;CustomGraphics&quot;: false,&#13;&#10;  &quot;DefaultAppearance&quot;: false,&#13;&#10;  &quot;BlackKeyRatio&quot;: 0.69999999,&#13;&#10;  &quot;ToggleMode&quot;: false,&#13;&#10;  &quot;MidiChannel&quot;: 1,&#13;&#10;  &quot;UseVectorGraphics&quot;: true,&#13;&#10;  &quot;UseFlatStyle&quot;: false,&#13;&#10;  &quot;MPEKeyboard&quot;: false,&#13;&#10;  &quot;MPEStartChannel&quot;: 2,&#13;&#10;  &quot;MPEEndChannel&quot;: 16&#13;&#10;}"
+               parentComponent="Background"/>
+    <Component type="ScriptImage" id="HiseLogo" x="956" y="15" fileName="{PROJECT_FOLDER}VCSL_Color_600x600.png"
+               alpha="0.80000001" parentComponent="Background"/>
+    <Component type="ScriptImage" id="VCSLLogo" x="15" y="12" fileName="{PROJECT_FOLDER}logo_new.png"
+               alpha="0.80000001" parentComponent="Background"/>
+    <Component type="ScriptLabel" id="Title" x="85" y="20" width="853" height="39"
+               fontStyle="Bold" text="VCSL - HISE Edition" bgColour="335544320"
+               fontSize="29" saveInPreset="0" editable="0" fontName="Oxygen"
+               textColour="4284045657" parentComponent="Background"/>
+    <Component type="ScriptPanel" id="EditPage" x="0" y="0" width="1034" height="588"
+               parentComponent="Background" itemColour="0" itemColour2="0" textColour="16777215"
+               bgColour="16777215">
+      <Component type="ScriptPanel" id="Tab1" x="0" y="0" width="515" height="585"
+                 parentComponent="EditPage" bgColour="0" itemColour="0" itemColour2="0"
+                 textColour="0" borderSize="0" borderRadius="0">
+        <Component type="ScriptPanel" id="InstrumentPanel1" x="85" y="89" width="414"
+                   height="158" parentComponent="Tab1" borderRadius="3" itemColour="486539264"
+                   itemColour2="335544320" bgColour="16777215" borderSize="0">
+          <Component type="ScriptLabel" id="InstrumentTitle1" x="17" y="17" width="381"
+                     height="38" fontStyle="Bold" text="Layer A" bgColour="335544320"
+                     fontSize="18" saveInPreset="0" editable="0" fontName="Oxygen"
+                     parentComponent="InstrumentPanel1" textColour="4284045657"/>
+        </Component>
+        <Component type="ScriptPanel" id="VelocityPanel1" x="85" y="269" width="414"
+                   height="308" parentComponent="Tab1" borderRadius="3" itemColour="486539264"
+                   itemColour2="335544320" bgColour="16777215" borderSize="0">
+          <Component type="ScriptLabel" id="VelocityTitle1" x="17" y="17" width="379"
+                     height="38" fontStyle="Bold" text="Velocity A" bgColour="335544320"
+                     fontSize="18" saveInPreset="0" editable="0" fontName="Oxygen"
+                     parentComponent="VelocityPanel1" textColour="4284045657"/>
+        </Component>
+      </Component>
+    </Component>
+  </Component>
+</ContentProperties>
