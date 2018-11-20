@@ -21,10 +21,37 @@ const var InstrumentSelector1 = Content.getComponent("InstrumentSelector1");
 
 InstrumentSelector1.set("items", sampleMaps.join("\n"));
 
+reg s1_last = 0;
+reg s1_current = 0;
+reg s2_last = 0;
+reg s2_current = 0;
+
+const var loadSampleTimer = Engine.createTimerObject();
+
+loadSampleTimer.setTimerCallback(function()
+{
+	if(s1_last != s1_current)
+    {
+        sampler1.loadSampleMap(sampleMaps[s1_last]);
+        s1_last = s1_current;
+    }
+    
+    if(s2_last != s2_current)
+    {
+        sampler2.loadSampleMap(sampleMaps[s2_last]);
+        s2_last = s2_current;
+    }
+});
+
+
+loadSampleTimer.startTimer(50);
+
 inline function onInstrumentSelector1Control(component, value)
 {
     if(value)
-	    sampler1.loadSampleMap(component.getItemText());
+    {
+        s1_current = value - 1;
+    }
 };
 
 InstrumentSelector1.setControlCallback(onInstrumentSelector1Control);
@@ -39,7 +66,9 @@ InstrumentSelector2.set("items", sampleMaps.join("\n"));
 inline function onInstrumentSelector2Control(component, value)
 {
     if(value)
-	    sampler2.loadSampleMap(component.getItemText());
+    {
+        s2_current = value - 1;
+    }
 };
 
 InstrumentSelector2.setControlCallback(onInstrumentSelector2Control);

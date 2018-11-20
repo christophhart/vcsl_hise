@@ -30,7 +30,8 @@
           <Component type="ScriptComboBox" id="InstrumentSelector1" x="111" y="83"
                      width="181" text="Select Instrument" bgColour="16777215" itemColour="288568115"
                      itemColour2="537989393" textColour="4278190080" parentComponent="InstrumentPanel1"
-                     items="Glockenspiel&#10;Harp&#10;Marimba&#10;Organ" max="4"/>
+                     items="Glockenspiel&#10;Harp&#10;Marimba&#10;Organ" max="4" isPluginParameter="1"
+                     pluginParameterName="Sample Slot 1"/>
           <Component type="ScriptLabel" id="ColourLabel1" x="-12" y="122" text="Colour"
                      fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
                      parentComponent="InstrumentPanel1"/>
@@ -76,7 +77,8 @@
           <Component type="ScriptComboBox" id="InstrumentSelector2" x="111" y="83"
                      width="181" text="Select Instrument" bgColour="16777215" itemColour="288568115"
                      itemColour2="537989393" textColour="4278190080" parentComponent="InstrumentPanel2"
-                     items="Glockenspiel&#10;Harp&#10;Marimba&#10;Organ" max="4"/>
+                     items="Glockenspiel&#10;Harp&#10;Marimba&#10;Organ" max="4" isPluginParameter="1"
+                     pluginParameterName="Sample Slot 2"/>
           <Component type="ScriptLabel" id="ReleaseLabel2" x="306" y="121" text="Release"
                      fontName="Oxygen" textColour="4278190080" saveInPreset="0" editable="0"
                      parentComponent="InstrumentPanel2"/>
