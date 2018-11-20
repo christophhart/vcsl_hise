@@ -50,7 +50,7 @@ inline function onInstrumentSelector1Control(component, value)
 {
     if(value)
     {
-        s1_current = value - 1;
+        s1_current = parseInt(value - 1);
     }
 };
 
@@ -67,7 +67,7 @@ inline function onInstrumentSelector2Control(component, value)
 {
     if(value)
     {
-        s2_current = value - 1;
+        s2_current = parseInt(value - 1);
     }
 };
 

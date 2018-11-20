@@ -26,7 +26,8 @@
                      parentComponent="InstrumentPanel1" textColour="4284045657"/>
           <Component type="ScriptPanel" id="LayerEnabled1" x="17" y="17" width="381"
                      height="38" parentComponent="InstrumentPanel1" allowCallbacks="Clicks &amp; Hover"
-                     saveInPreset="1" stepSize="1" processorId="Sampler1" parameterId="Enabled"/>
+                     saveInPreset="1" stepSize="1" processorId="Sampler1" parameterId="Enabled"
+                     pluginParameterName="Layer 1 Enabled"/>
           <Component type="ScriptComboBox" id="InstrumentSelector1" x="111" y="83"
                      width="181" text="Select Instrument" bgColour="16777215" itemColour="288568115"
                      itemColour2="537989393" textColour="4278190080" parentComponent="InstrumentPanel1"
@@ -73,7 +74,8 @@
                      parentComponent="InstrumentPanel2" textColour="4284045657"/>
           <Component type="ScriptPanel" id="LayerEnabled2" x="17" y="17" width="381"
                      height="38" parentComponent="InstrumentPanel2" allowCallbacks="Clicks &amp; Hover"
-                     saveInPreset="1" stepSize="1" processorId="Sampler1" parameterId="Enabled"/>
+                     saveInPreset="1" stepSize="1" processorId="Sampler2" parameterId="Enabled"
+                     enableMidiLearn="1" pluginParameterName="Layer 2 Enabled"/>
           <Component type="ScriptComboBox" id="InstrumentSelector2" x="111" y="83"
                      width="181" text="Select Instrument" bgColour="16777215" itemColour="288568115"
                      itemColour2="537989393" textColour="4278190080" parentComponent="InstrumentPanel2"

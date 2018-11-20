@@ -10,12 +10,12 @@
           <ChildProcessors/>
           <Content>
             <Control type="ScriptPanel" id="LayerEnabled1" value="1"/>
-            <Control type="ScriptComboBox" id="InstrumentSelector1" value="4"/>
+            <Control type="ScriptComboBox" id="InstrumentSelector1" value="3"/>
             <Control type="ScriptSlider" id="ReleaseSlider1" value="1033"/>
             <Control type="ScriptSlider" id="ColourSlider1" value="0"/>
-            <Control type="ScriptTable" id="Table1" value="0" data="24...............vO...f+....9C6++uO"/>
-            <Control type="ScriptPanel" id="LayerEnabled2" value="0"/>
-            <Control type="ScriptComboBox" id="InstrumentSelector2" value="2"/>
+            <Control type="ScriptTable" id="Table1" value="0" data="24...............vO...f+....9igYtpO"/>
+            <Control type="ScriptPanel" id="LayerEnabled2" value="1"/>
+            <Control type="ScriptComboBox" id="InstrumentSelector2" value="3"/>
             <Control type="ScriptSlider" id="ReleaseSlider2" value="933"/>
             <Control type="ScriptSlider" id="ColourSlider2" value="0"/>
             <Control type="ScriptTable" id="Table2" value="0" data="24...............vO...f+....9CMyLuO"/>
@@ -53,7 +53,7 @@
     <Processor Type="EffectChain" ID="FX" Bypassed="0">
       <ChildProcessors/>
     </Processor>
-    <Processor Type="StreamingSampler" ID="Sampler1" Bypassed="1" Gain="1" Balance="0"
+    <Processor Type="StreamingSampler" ID="Sampler1" Bypassed="0" Gain="1" Balance="0"
                VoiceLimit="256" KillFadeTime="20" IconColour="0" PreloadSize="8192"
                BufferSize="4096" VoiceAmount="256" SamplerRepeatMode="3" RRGroupAmount="1"
                PitchTracking="1" OneShot="0" CrossfadeGroups="0" Purged="0"
@@ -61,7 +61,7 @@
                Group1Table="24...............vO...f+....9C...vO" Group2Table="24...............vO...f+....9C...vO"
                Group3Table="24...............vO...f+....9C...vO" Group4Table="24...............vO...f+....9C...vO"
                Group5Table="24...............vO...f+....9C...vO" Group6Table="24...............vO...f+....9C...vO"
-               Group7Table="24...............vO...f+....9C...vO" SampleMapID="Glockenspiel">
+               Group7Table="24...............vO...f+....9C...vO" SampleMapID="Organ">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>
@@ -82,7 +82,7 @@
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1">
           <ChildProcessors>
             <Processor Type="Velocity" ID="Velocity1" Bypassed="1" Intensity="1" UseTable="1"
-                       Inverted="0" DecibelMode="0" VelocityTableData="24...............vO...f+....9C6++uO">
+                       Inverted="0" DecibelMode="0" VelocityTableData="24...............vO...f+....9igYtpO">
               <ChildProcessors/>
             </Processor>
             <Processor Type="SimpleEnvelope" ID="DefaultEnvelope1" Bypassed="0" Monophonic="0"
@@ -102,7 +102,7 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="Filter1" Bypassed="1" Gain="0" Frequency="615"
-                       Q="0.60000002" Mode="6" Quality="4456448" BipolarIntensity="0">
+                       Q="0.60000002" Mode="6" Quality="0" BipolarIntensity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1">
@@ -148,7 +148,7 @@
                Group1Table="24...............vO...f+....9C...vO" Group2Table="24...............vO...f+....9C...vO"
                Group3Table="24...............vO...f+....9C...vO" Group4Table="24...............vO...f+....9C...vO"
                Group5Table="24...............vO...f+....9C...vO" Group6Table="24...............vO...f+....9C...vO"
-               Group7Table="24...............vO...f+....9C...vO" SampleMapID="Marimba">
+               Group7Table="24...............vO...f+....9C...vO" SampleMapID="Harp">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>
@@ -189,7 +189,7 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="Filter2" Bypassed="0" Gain="0" Frequency="20000"
-                       Q="0.5" Mode="6" Quality="-8.4332966e+08" BipolarIntensity="0">
+                       Q="0.5" Mode="6" Quality="6.0304384e+08" BipolarIntensity="0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1">
