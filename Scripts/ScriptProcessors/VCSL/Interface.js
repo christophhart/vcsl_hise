@@ -6,6 +6,8 @@ include("PageHandling.js");
 
 include("PowerButton.js");
 
+PowerButton.make("LayerEnabled1");
+PowerButton.make("LayerEnabled2");
 PowerButton.make("DelayEnabled1");
 PowerButton.make("DelayEnabled2");
 PowerButton.make("FilterEnabled1");
@@ -85,10 +87,10 @@ inline function refreshKeys()
         local n1 = i - c1;
         local n2 = i - c2;
         
-        if(sampler1.isNoteNumberMapped(n1))
+        if(LayerEnabled1.getValue() && sampler1.isNoteNumberMapped(n1))
             c |= 0x220077FF;
             
-        if(sampler2.isNoteNumberMapped(n2))
+        if(LayerEnabled2.getValue() && sampler2.isNoteNumberMapped(n2))
             c |= 0x22FF8800;
         
         if(c == 0)
@@ -108,23 +110,28 @@ Background.setLoadingCallback(function(isPreloading)
 
 const var ColourSlider1 = Content.getComponent("ColourSlider1");
 const var ColourSlider2 = Content.getComponent("ColourSlider2");
+const var LayerEnabled1 = Content.getComponent("LayerEnabled1");
+const var LayerEnabled2 = Content.getComponent("LayerEnabled2");
+
+
+
 
 var c1 = 0;
 var c2 = 0;
+var l1 = 0;
+var l2 = 0;
 
 Background.setTimerCallback(function()
 {
-    var dirty = false;
-    
-    if(ColourSlider1.getValue() != c1 ||
-       ColourSlider2.getValue() != c2)
-        dirty = true;
-        
-    c1 = ColourSlider1.getValue();
-    c2 = ColourSlider2.getValue();
-    
-    if(dirty)
+    if(l1 != LayerEnabled1.getValue() ||
+       l2 != LayerEnabled2.getValue() ||
+       c1 != ColourSlider1.getValue() ||
+       c2 != ColourSlider2.getValue())
+    {
+        c1 = ColourSlider1.getValue();
+        c2 = ColourSlider2.getValue();
         refreshKeys();
+    }
 });
 
 Background.startTimer(100);
