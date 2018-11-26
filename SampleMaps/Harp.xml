@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<samplemap ID="Harp" RRGroupAmount="1" MicPositions=";" SaveMode="2">
+  <sample Root="46" LoKey="46" HiKey="47" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_A#1_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="42.666668" Volume="-6"
+          MonolithOffset="0" MonolithLength="356352" SampleRate="44100"/>
+  <sample Root="46" LoKey="46" HiKey="47" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_A#1_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="4.7414269" MonolithOffset="356352"
+          MonolithLength="507904" SampleRate="44100"/>
+  <sample Root="58" LoKey="58" HiKey="59" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_A#2_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="17.779707" Volume="-6"
+          MonolithOffset="864256" MonolithLength="278528" SampleRate="44100"/>
+  <sample Root="58" LoKey="58" HiKey="59" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_A#2_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="3.3426502" MonolithOffset="1142784"
+          MonolithLength="356352" SampleRate="44100"/>
+  <sample Root="70" LoKey="70" HiKey="71" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_A#3_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="15.64105" Volume="-6"
+          MonolithOffset="1499136" MonolithLength="176128" SampleRate="44100"/>
+  <sample Root="70" LoKey="70" HiKey="71" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_A#3_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="3.4222455" MonolithOffset="1675264"
+          MonolithLength="233472" SampleRate="44100"/>
+  <sample Root="82" LoKey="82" HiKey="83" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_A#4_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="20.140135" Volume="-6"
+          MonolithOffset="1908736" MonolithLength="86016" SampleRate="44100"/>
+  <sample Root="82" LoKey="82" HiKey="83" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_A#4_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="3.5874753" MonolithOffset="1994752"
+          MonolithLength="122880" SampleRate="44100"/>
+  <sample Root="36" LoKey="36" HiKey="37" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_C1_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="44.949245" Volume="-6"
+          MonolithOffset="2117632" MonolithLength="880640" SampleRate="44100"/>
+  <sample Root="36" LoKey="36" HiKey="37" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_C1_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="6.5054598" MonolithOffset="2998272"
+          MonolithLength="1331200" SampleRate="44100"/>
+  <sample Root="48" LoKey="48" HiKey="49" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_C2_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="13.261028" Volume="-6"
+          MonolithOffset="4329472" MonolithLength="454656" SampleRate="44100"/>
+  <sample Root="48" LoKey="48" HiKey="49" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_C2_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="1.1391226" MonolithOffset="4784128"
+          MonolithLength="569344" SampleRate="44100"/>
+  <sample Root="60" LoKey="60" HiKey="61" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_C3_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="19.811367" Volume="-6"
+          MonolithOffset="5353472" MonolithLength="348160" SampleRate="44100"/>
+  <sample Root="60" LoKey="60" HiKey="61" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_C3_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="2.2049661" MonolithOffset="5701632"
+          MonolithLength="425984" SampleRate="44100"/>
+  <sample Root="72" LoKey="72" HiKey="73" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_C4_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="16.054874" Volume="-6"
+          MonolithOffset="6127616" MonolithLength="196608" SampleRate="44100"/>
+  <sample Root="72" LoKey="72" HiKey="73" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_C4_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="3.130302" MonolithOffset="6324224"
+          MonolithLength="483328" SampleRate="44100"/>
+  <sample Root="84" LoKey="84" HiKey="85" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_C5_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="24.861912" Volume="-6"
+          MonolithOffset="6807552" MonolithLength="94208" SampleRate="44100"/>
+  <sample Root="84" LoKey="84" HiKey="85" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_C5_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="8.2831144" MonolithOffset="6901760"
+          MonolithLength="135168" SampleRate="44100"/>
+  <sample Root="38" LoKey="38" HiKey="39" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_D1_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="15.420236" Volume="-6"
+          MonolithOffset="7036928" MonolithLength="798720" SampleRate="44100"/>
+  <sample Root="38" LoKey="38" HiKey="39" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_D1_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="5.6545296" MonolithOffset="7835648"
+          MonolithLength="974848" SampleRate="44100"/>
+  <sample Root="50" LoKey="50" HiKey="51" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_D2_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="22.882681" Volume="-6"
+          MonolithOffset="8810496" MonolithLength="294912" SampleRate="44100"/>
+  <sample Root="50" LoKey="50" HiKey="51" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_D2_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="3.7219446" MonolithOffset="9105408"
+          MonolithLength="561152" SampleRate="44100"/>
+  <sample Root="62" LoKey="62" HiKey="63" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_D3_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="31.207619" Volume="-6"
+          MonolithOffset="9666560" MonolithLength="253952" SampleRate="44100"/>
+  <sample Root="62" LoKey="62" HiKey="63" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_D3_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="3.7483413" MonolithOffset="9920512"
+          MonolithLength="421888" SampleRate="44100"/>
+  <sample Root="74" LoKey="74" HiKey="75" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_D4_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="48.61721" Volume="-6"
+          MonolithOffset="10342400" MonolithLength="241664" SampleRate="44100"/>
+  <sample Root="74" LoKey="74" HiKey="75" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_D4_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="3.488184" MonolithOffset="10584064"
+          MonolithLength="356352" SampleRate="44100"/>
+  <sample Root="86" LoKey="86" HiKey="87" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_D5_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="33.816307" Volume="-6"
+          MonolithOffset="10940416" MonolithLength="118784" SampleRate="44100"/>
+  <sample Root="86" LoKey="86" HiKey="87" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_D5_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="3.6481853" MonolithOffset="11059200"
+          MonolithLength="114688" SampleRate="44100"/>
+  <sample Root="40" LoKey="40" HiKey="41" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_E1_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="11.989755" Volume="-6"
+          MonolithOffset="11173888" MonolithLength="630784" SampleRate="44100"/>
+  <sample Root="40" LoKey="40" HiKey="41" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_E1_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="3.2969112" MonolithOffset="11804672"
+          MonolithLength="716800" SampleRate="44100"/>
+  <sample Root="52" LoKey="52" HiKey="53" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_E2_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="20.924648" Volume="-6"
+          MonolithOffset="12521472" MonolithLength="344064" SampleRate="44100"/>
+  <sample Root="52" LoKey="52" HiKey="53" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_E2_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="4.2418122" MonolithOffset="12865536"
+          MonolithLength="372736" SampleRate="44100"/>
+  <sample Root="64" LoKey="64" HiKey="65" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_E3_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="11.859573" Volume="-6"
+          MonolithOffset="13238272" MonolithLength="294912" SampleRate="44100"/>
+  <sample Root="64" LoKey="64" HiKey="65" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_E3_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="2.4348342" MonolithOffset="13533184"
+          MonolithLength="421888" SampleRate="44100"/>
+  <sample Root="76" LoKey="76" HiKey="77" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_E4_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="18.86471" Volume="-6"
+          MonolithOffset="13955072" MonolithLength="184320" SampleRate="44100"/>
+  <sample Root="76" LoKey="76" HiKey="77" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_E4_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="3.4297676" MonolithOffset="14139392"
+          MonolithLength="315392" SampleRate="44100"/>
+  <sample Root="88" LoKey="88" HiKey="89" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_E5_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="10.832397" Volume="-6"
+          MonolithOffset="14454784" MonolithLength="73728" SampleRate="44100"/>
+  <sample Root="88" LoKey="88" HiKey="89" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_E5_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="5.0489984" MonolithOffset="14528512"
+          MonolithLength="86016" SampleRate="44100"/>
+  <sample Root="42" LoKey="42" HiKey="43" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_F#1_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="15.753846" Volume="-6"
+          MonolithOffset="14614528" MonolithLength="368640" SampleRate="44100"/>
+  <sample Root="42" LoKey="42" HiKey="43" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_F#1_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="6.0390711" MonolithOffset="14983168"
+          MonolithLength="688128" SampleRate="44100"/>
+  <sample Root="54" LoKey="54" HiKey="55" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_F#2_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="24.749245" Volume="-6"
+          MonolithOffset="15671296" MonolithLength="397312" SampleRate="44100"/>
+  <sample Root="54" LoKey="54" HiKey="55" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_F#2_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="4.4401083" MonolithOffset="16068608"
+          MonolithLength="417792" SampleRate="44100"/>
+  <sample Root="66" LoKey="66" HiKey="67" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_F#3_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="29.283289" Volume="-6"
+          MonolithOffset="16486400" MonolithLength="294912" SampleRate="44100"/>
+  <sample Root="66" LoKey="66" HiKey="67" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_F#3_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="2.2182508" MonolithOffset="16781312"
+          MonolithLength="458752" SampleRate="44100"/>
+  <sample Root="78" LoKey="78" HiKey="79" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_F#4_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="28.175409" Volume="-6"
+          MonolithOffset="17240064" MonolithLength="131072" SampleRate="44100"/>
+  <sample Root="78" LoKey="78" HiKey="79" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_F#4_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="4.7496738" MonolithOffset="17371136"
+          MonolithLength="258048" SampleRate="44100"/>
+  <sample Root="90" LoKey="90" HiKey="91" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_F#5_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="10.08867" Volume="-6"
+          MonolithOffset="17629184" MonolithLength="69632" SampleRate="44100"/>
+  <sample Root="90" LoKey="90" HiKey="91" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_F#5_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="3.0340741" MonolithOffset="17698816"
+          MonolithLength="102400" SampleRate="44100"/>
+  <sample Root="44" LoKey="44" HiKey="45" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_G#1_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="34.638477" Volume="-6"
+          MonolithOffset="17801216" MonolithLength="811008" SampleRate="44100"/>
+  <sample Root="44" LoKey="44" HiKey="45" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_G#1_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="4.9009871" MonolithOffset="18612224"
+          MonolithLength="860160" SampleRate="44100"/>
+  <sample Root="56" LoKey="56" HiKey="57" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_G#2_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="27.375105" Volume="-6"
+          MonolithOffset="19472384" MonolithLength="335872" SampleRate="44100"/>
+  <sample Root="56" LoKey="56" HiKey="57" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_G#2_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="3.6445334" MonolithOffset="19808256"
+          MonolithLength="290816" SampleRate="44100"/>
+  <sample Root="68" LoKey="68" HiKey="69" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_G#3_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="28.297064" Volume="-6"
+          MonolithOffset="20099072" MonolithLength="180224" SampleRate="44100"/>
+  <sample Root="68" LoKey="68" HiKey="69" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_G#3_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="2.4530618" MonolithOffset="20279296"
+          MonolithLength="258048" SampleRate="44100"/>
+  <sample Root="80" LoKey="80" HiKey="81" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_G#4_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="11.566537" Volume="-6"
+          MonolithOffset="20537344" MonolithLength="90112" SampleRate="44100"/>
+  <sample Root="80" LoKey="80" HiKey="81" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_G#4_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="5.351625" MonolithOffset="20627456"
+          MonolithLength="151552" SampleRate="44100"/>
+  <sample Root="92" LoKey="92" HiKey="92" LoVel="0" HiVel="63" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_G#5_v2_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="9.2512703" Volume="-6"
+          MonolithOffset="20779008" MonolithLength="57344" SampleRate="44100"/>
+  <sample Root="92" LoKey="92" HiKey="92" LoVel="64" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Folk Harp/EWHarp_Normal_G#5_v3_RR1.wav"
+          Duplicate="1" Normalized="1" NormalizedPeak="2.5998096" MonolithOffset="20836352"
+          MonolithLength="69632" SampleRate="44100"/>
+</samplemap>

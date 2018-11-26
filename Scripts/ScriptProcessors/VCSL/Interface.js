@@ -32,13 +32,13 @@ loadSampleTimer.setTimerCallback(function()
 {
 	if(s1_last != s1_current)
     {
-        sampler1.loadSampleMap(sampleMaps[s1_last]);
+        sampler1.loadSampleMap(sampleMaps[s1_current]);
         s1_last = s1_current;
     }
     
     if(s2_last != s2_current)
     {
-        sampler2.loadSampleMap(sampleMaps[s2_last]);
+        sampler2.loadSampleMap(sampleMaps[s2_current]);
         s2_last = s2_current;
     }
 });
