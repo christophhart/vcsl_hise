@@ -114,7 +114,7 @@ VCSOInterface::VCSOInterface(VCSLData* data) :
 	presetBrowserBg.addAndMakeVisible(presetBrowser);
 
 	presetBrowser.setName("PresetBrowser");
-	presetBrowser.pblaf.modalBackgroundColour = Colours::black.withAlpha(0.3f);
+	presetBrowser.pblaf->modalBackgroundColour = Colours::black.withAlpha(0.3f);
 
 	PresetBrowser::Options newOptions;
 

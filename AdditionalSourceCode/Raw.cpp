@@ -3,7 +3,7 @@
 #if USE_RAW_FRONTEND
 
 VCSLData::VCSLData(MainController* mc) :
-    RawDataBase(mc)
+    DataHolderBase(mc)
 {
     auto storagePtr = &storedData;
   
@@ -77,7 +77,7 @@ VCSLData::VCSLData(MainController* mc) :
 
 
 /** This method needs to be implemented and your initial preset structure must be defined here. */
-FrontendProcessor::RawDataBase* FrontendProcessor::createPresetRaw()
+raw::DataHolderBase* FrontendProcessor::createPresetRaw()
 {
 	return new VCSLData(this);
 }
