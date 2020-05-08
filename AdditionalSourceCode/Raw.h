@@ -11,7 +11,7 @@ class ColourMidiProcessor : public hise::HardcodedScriptProcessor
 public:
 
 	/** Set the name and default ID of the processor. */
-	SET_PROCESSOR_NAME("Colour", "Colour");
+	SET_PROCESSOR_NAME("Colour", "Colour", "Colour");
 
 	enum Parameters
 	{
@@ -38,7 +38,7 @@ public:
 	JUCE_DECLARE_WEAK_REFERENCEABLE(ColourMidiProcessor);
 };
 
-class VCSLData : public FrontendProcessor::RawDataBase
+class VCSLData : public hise::raw::DataHolderBase
 {
 public:
 
