@@ -69,7 +69,7 @@ public ControlledObject
 {
 public:
 
-	BrightComboBox(MainController* mc, const String& name, const String& processorId) :
+	BrightComboBox(MainController* mc, const String& name, const String& processorId, raw::UIConnection::ComboBox::Mode m) :
 		ControlledObject(mc),
 		connection(this, mc, processorId)
 	{
@@ -82,6 +82,7 @@ public:
 		setColour(HiseColourScheme::ComponentFillTopColourId, Colour(0x11333333));
 		setColour(HiseColourScheme::ComponentFillBottomColourId, Colour(0x20111111));
 
+		connection.setMode(m);
 		connection.setData<ConnectionType>();
 	}
 

@@ -13,8 +13,9 @@ VCSOInterface::SamplerTab::SamplerTab(MainController* mc, int index_) :
 	colorScript(mc, indexed("Colour"), true),
 	releaseSlider(mc, indexed("ReleaseSlider")),
 	colourSlider(mc, indexed("ColourSlider")),
-	sampleMapSelector(mc, indexed("InstrumentSelector"), indexed("Sampler")),
-	velocityEditor(nullptr, nullptr)
+	
+	sampleMapSelector(mc, indexed("InstrumentSelector"), indexed("Sampler"), raw::UIConnection::ComboBox::Text),
+	velocityEditor(nullptr, nullptr),
 {
 	setName(indexed("Tab"));
 
@@ -24,7 +25,10 @@ VCSOInterface::SamplerTab::SamplerTab(MainController* mc, int index_) :
 	instrumentPanel.addAndMakeVisible(colourLabel);
 	instrumentPanel.addAndMakeVisible(releaseLabel);
 	instrumentPanel.addAndMakeVisible(sampleMapSelector);
-	sampleMapSelector.addItemList(raw::Pool(mc, true).getSampleMapList(), 1);
+
+	auto sampleMapList = raw::Pool(mc, true).getListOfEmbeddedResources(FileHandlerBase::SampleMaps);
+
+	sampleMapSelector.addItemList(sampleMapList, 1);
 	sampleMapSelector.setConnectionMode(raw::UIConnection::ComboBox::Text);
 	sampleMapSelector.setTextWhenNothingSelected("Select Sampleset");
 
@@ -114,7 +118,6 @@ VCSOInterface::VCSOInterface(VCSLData* data) :
 	presetBrowserBg.addAndMakeVisible(presetBrowser);
 
 	presetBrowser.setName("PresetBrowser");
-	presetBrowser.pblaf->modalBackgroundColour = Colours::black.withAlpha(0.3f);
 
 	PresetBrowser::Options newOptions;
 
@@ -192,7 +195,7 @@ VCSOInterface::VCSOInterface(VCSLData* data) :
 	makeButton(browseButton, "Browse");
 	makeButton(settingsButton, "Settings");
 
-	showPage(&settingsButton);
+	showPage(&editButton);
 
 	refreshKeyboardColours();
 

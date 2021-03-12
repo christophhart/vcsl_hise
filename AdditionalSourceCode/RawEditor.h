@@ -97,7 +97,7 @@ public:
 			freqSlider(mc, indexed("FrequencySlider")),
 			qSlider(mc, indexed("QSlider")),
 			filterGraph(mc, nullptr),
-			filterSelector(mc, indexed("FilterSelector"), indexed("Filter")),
+			filterSelector(mc, indexed("FilterSelector"), indexed("Filter"), raw::UIConnection::ComboBox::Id),
 			delayEnabled(mc, indexed("DelayEnabled"), indexed("Delay")),
 			filterEnabled(mc, indexed("FilterEnabled"), indexed("Filter"))
 		{
@@ -111,24 +111,25 @@ public:
 			delayPanel.addAndMakeVisible(mixLabel);
 
 			delayPanel.addAndMakeVisible(leftTimeSlider);
-			leftTimeSlider.connect(indexed("Delay"));
 			leftTimeSlider.setMode(HiSlider::TempoSync);
+			leftTimeSlider.connect(indexed("Delay"));
+			
 
 			delayPanel.addAndMakeVisible(rightTimeSlider);
-			rightTimeSlider.connect(indexed("Delay"));
 			rightTimeSlider.setMode(HiSlider::TempoSync);
-
+			rightTimeSlider.connect(indexed("Delay"));
+			
 			delayPanel.addAndMakeVisible(leftFBLabel);
 			delayPanel.addAndMakeVisible(rightFBLabel);
 
 			delayPanel.addAndMakeVisible(leftFBSlider);
-			leftFBSlider.connect(indexed("Delay"));
 			leftFBSlider.setMode(HiSlider::NormalizedPercentage);
-
+			leftFBSlider.connect(indexed("Delay"));
+			
 			delayPanel.addAndMakeVisible(rightFBSlider);
-			rightFBSlider.connect(indexed("Delay"));
 			rightFBSlider.setMode(HiSlider::NormalizedPercentage);
-
+			rightFBSlider.connect(indexed("Delay"));
+			
 			delayPanel.addAndMakeVisible(mixSlider);
 			mixSlider.setMode(HiSlider::NormalizedPercentage);
 			mixSlider.connect(indexed("Delay"));
@@ -140,13 +141,13 @@ public:
 			filterPanel.addAndMakeVisible(qLabel);
 			filterPanel.addAndMakeVisible(frequencyLabel);
 			filterPanel.addAndMakeVisible(freqSlider);
-			freqSlider.connect(indexed("Filter"));
 			freqSlider.setMode(HiSlider::Frequency);
-
+			freqSlider.connect(indexed("Filter"));
+			
 			filterPanel.addAndMakeVisible(qSlider);
-			qSlider.connect(indexed("Filter"));
 			qSlider.setMode(HiSlider::Linear, 0.1, 9.0, 1.0, 0.01);
-
+			qSlider.connect(indexed("Filter"));
+			
 			filterPanel.addAndMakeVisible(filterGraph);
 
 
@@ -170,7 +171,6 @@ public:
 			filterSelector.addItem("Low Pass", FilterBank::FilterMode::StateVariableLP);
 			filterSelector.addItem("High Pass", FilterBank::FilterMode::StateVariableHP);
 			filterSelector.addItem("All Pass", FilterBank::FilterMode::Allpass);
-			filterSelector.setConnectionMode(raw::UIConnection::ComboBox::Id);
 		};
 
 		GreyPanel delayPanel;
@@ -193,15 +193,15 @@ public:
 		StrippedSlider<DelayEffect::FeedbackRight> rightFBSlider;
 		StrippedSlider<DelayEffect::Mix> mixSlider;
 
-		StrippedSlider<MonoFilterEffect::Frequency> freqSlider;
-		StrippedSlider<MonoFilterEffect::Q> qSlider;
+		StrippedSlider<PolyFilterEffect::Frequency> freqSlider;
+		StrippedSlider<PolyFilterEffect::Q> qSlider;
 
 		PowerButton filterEnabled;
 		PowerButton delayEnabled;
 
 		hise::FloatingTile filterGraph;
 
-		BrightComboBox<raw::Data<int>::Attribute<MonoFilterEffect::Mode>> filterSelector;
+		BrightComboBox<raw::Data<int>::Attribute<PolyFilterEffect::Mode>> filterSelector;
 	};
 
 	void addAndSetName(Component& parent, Component& c, const String& name)

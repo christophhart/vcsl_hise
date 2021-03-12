@@ -59,15 +59,16 @@ public:
 
 	void restoreFromValueTree(const ValueTree& v) override
 	{
-		if (v.getNumChildren() != storedData.size())
-		{
-			jassertfalse;
-			return;
-		}
+		static const Array<Identifier> hiseIds = { Identifier("MPEData"), Identifier("MidiAutomation") }; // add any other "hardcoded" child element of the preset XML's root here...
 
-		for (int i = 0; i < v.getNumChildren(); i++)
+		int index = 0;
+
+		for (auto c : v)
 		{
-			storedData[i]->restoreFromValueTree(v.getChild(i));
+			if (hiseIds.contains(c.getType()))
+				continue;
+
+			storedData[index++]->restoreFromValueTree(c);
 		}
 	}
 
