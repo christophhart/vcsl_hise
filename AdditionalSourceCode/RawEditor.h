@@ -65,6 +65,9 @@ public:
 
 		StrippedSlider<SimpleEnvelope::Release> releaseSlider;
 		StrippedSlider<ColourMidiProcessor::ColourValue> colourSlider;
+
+		Slider veloIntensity;
+		raw::UIConnection::SliderBase veloIntensityConnection;
 	};
 
 	class FXTab : public Tab

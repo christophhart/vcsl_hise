@@ -16,6 +16,8 @@ VCSOInterface::SamplerTab::SamplerTab(MainController* mc, int index_) :
 	
 	sampleMapSelector(mc, indexed("InstrumentSelector"), indexed("Sampler"), raw::UIConnection::ComboBox::Text),
 	velocityEditor(nullptr, nullptr),
+	veloIntensity(indexed("Velocity")),
+	veloIntensityConnection(&veloIntensity, mc, indexed("Velocity"))
 {
 	setName(indexed("Tab"));
 
@@ -52,8 +54,12 @@ VCSOInterface::SamplerTab::SamplerTab(MainController* mc, int index_) :
 	velocityPanel.setName(indexed("VelocityPanel"));
 
 	velocityPanel.addAndMakeVisible(veloTitle);
-
 	velocityPanel.addAndMakeVisible(velocityEditor);
+	velocityPanel.addAndMakeVisible(veloIntensity);
+
+	veloIntensity.setSliderStyle(Slider::SliderStyle::LinearBar);
+	veloIntensity.setRange(0.0, 1.0, 0.01);
+	veloIntensityConnection.setData<raw::Data<float>::Intensity>();
 
 	velocityEditor.setName(indexed("Table"));
 	velocityEditor.setUseFlatDesign(true);
@@ -241,7 +247,8 @@ void VCSOInterface::resized()
 		  {
 			  "VelocityPanel1",{ 85, 269, 414, 308 },
 		   {
-			   { "Table1",{ 18, 69, 377, 216 },{} },
+			   { "Table1",{ 18, 69, 377, 180 },{} },
+			   { "Velocity1",{ 18, 260, 377, 22 },{} },
 		{ "VelocityTitle1",{ 17, 17, 379, 38 },{} }
 		   }
 		  }
@@ -264,7 +271,8 @@ void VCSOInterface::resized()
 		  {
 			  "VelocityPanel2",{ 17, 269, 414, 308 },
 		   {
-			   { "Table2",{ 18, 69, 377, 216 },{} },
+			   { "Table2",{ 18, 69, 377, 180 },{} },
+		       { "Velocity2" ,{ 18, 260, 377, 22 },{} },
 		{ "VelocityTitle2",{ 17, 17, 380, 38 },{} }
 		   }
 		  }
