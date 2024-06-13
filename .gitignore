@@ -3,3 +3,12 @@ Binaries/
 *.hip
 UserPresets/db.json
 *.hr1
+Autosave_0.json
+Autosave_1.json
+Autosave_2.json
+Autosave_3.json
+Autosave_4.json
+*.dmg
+Installer/VCSL Hise Edition Installer.app
+Installer/VCSL Hise Edition.component
+Installer/VCSL Hise Edition.vst3

@@ -1,0 +1,222 @@
+{
+  "StyleData": {},
+  "Properties": {
+    "Header": "VCSL Hise Edition Installer",
+    "Subtitle": "",
+    "ProjectName": "VCSL Hise Edition",
+    "Company": "HISE",
+    "Version": "1.0.0",
+    "BinaryName": "VCSL Hise Edition Installer",
+    "UseGlobalAppData": false,
+    "Icon": "${icon}"
+  },
+  "LayoutData": {
+    "StyleSheet": "Dark",
+    "Style": "#content\n{\n\tpadding-left: 80px;\n\tpadding-right: 80px;\n\t\n}\n",
+    "DialogWidth": 800,
+    "DialogHeight": 600
+  },
+  "GlobalState": {
+    
+  },
+  "Children": [
+    {
+      "Type": "List",
+      "Children": [
+        {
+          "Type": "ProjectInfo"
+        },
+        {
+          "Type": "MarkdownText",
+          "Text": "Welcome to the installer of the $product $version.\n\n> This installer was made with the multipage creator app that is included in HISE and can be used as a template for a neat end user experience.",
+          "Style": "gap: 10px;"
+        }
+      ],
+      "Text": ""
+    },
+    {
+      "Type": "List",
+      "Children": [
+        {
+          "Type": "MarkdownText",
+          "Text": "Please read and accept the TOC\n\n"
+        },
+        {
+          "Type": "TextInput",
+          "ID": "eula",
+          "InitValue": "${eula}",
+          "UseInitValue": true,
+          "NoLabel": true,
+          "Height": "200",
+          "Multiline": true,
+          "Enabled": false,
+          "Text": "",
+          "Style": "color: #222; background: white;"
+        },
+        {
+          "Type": "Button",
+          "Text": "I have read and accepted the TOC",
+          "ID": "ButtonId",
+          "NoLabel": true,
+          "Required": true,
+          "InitValue": "0",
+          "UseInitValue": true
+        }
+      ],
+      "Text": "",
+      "Style": "gap: 10px;"
+    },
+    {
+      "Type": "List",
+      "Children": [
+        {
+          "Type": "ProjectInfo"
+        },
+        {
+          "Type": "OperatingSystem"
+        },
+        {
+          "Type": "Branch",
+          "ID": "OS",
+          "Children": [
+            {
+              "Type": "List"
+            },
+            {
+              "Type": "List"
+            },
+            {
+              "Type": "List",
+              "ID": "macOS",
+              "Style": "gap: 10px;",
+              "Children": [
+                {
+                  "Type": "RelativeFileLoader",
+                  "ID": "auLoader",
+                  "SpecialLocation": "parentDirectory",
+                  "RelativePath": "$product.component"
+                },
+                {
+                  "Type": "RelativeFileLoader",
+                  "ID": "vstLoader",
+                  "SpecialLocation": "parentDirectory",
+                  "RelativePath": "$product.vst3"
+                },
+                {
+                  "Type": "PluginDirectories"
+                },
+                {
+                  "Type": "MarkdownText",
+                  "Text": "Please select the plugins you want to install:"
+                },
+                {
+                  "Type": "Button",
+                  "Text": "Install AU Plugin",
+                  "ID": "installAU",
+                  "InitValue": "1",
+                  "UseInitValue": true,
+                  "NoLabel": true
+                },
+                {
+                  "Type": "CopySiblingFile",
+                  "Text": "Installing AU",
+                  "ID": "installAU",
+                  "EventTrigger": "OnSubmit",
+                  "Overwrite": true,
+                  "Target": "$auDirectory",
+                  "Source": "$auLoader"
+                },
+                {
+                  "Type": "Button",
+                  "Text": "Install VST Plugin",
+                  "ID": "installVST",
+                  "InitValue": "1",
+                  "UseInitValue": true,
+                  "NoLabel": true
+                },
+                {
+                  "Type": "CopySiblingFile",
+                  "Text": "Installing VST3",
+                  "ID": "installVST",
+                  "EventTrigger": "OnSubmit",
+                  "Overwrite": true,
+                  "Source": "$vstLoader",
+                  "Target": "$vst3Directory"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+    },
+    {
+      "Type": "List",
+      "Children": [
+        {
+          "Type": "ProjectInfo"
+        },
+        {
+          "Type": "MarkdownText",
+          "Text": "Please select the location where you want to extract the samples. "
+        },
+        {
+          "Type": "RelativeFileLoader",
+          "ID": "musicDirectory",
+          "SpecialLocation": "userMusicDirectory"
+        },
+        {
+          "Type": "RelativeFileLoader",
+          "ID": "sampleArchive",
+          "SpecialLocation": "parentDirectory",
+          "RelativePath": "$product 1_0_0_Samples.hr1"
+        },
+        {
+          "Type": "FileSelector",
+          "Text": "Sample Location",
+          "ID": "sampleLocation",
+          "InitValue": "$musicDirectory/$company/$product",
+          "UseInitValue": true
+        },
+        {
+          "Type": "HlacDecoder",
+          "Text": "Progress",
+          "EventTrigger": "OnSubmit",
+          "Target": "$sampleLocation",
+          "Source": "$sampleArchive"
+        },
+        {
+          "Type": "AppDataFileWriter",
+          "ID": "sampleLocation",
+          "EventTrigger": "OnSubmit",
+          "Target": "LinkFile"
+        }
+      ],
+      "Style": "gap: 10px;"
+    },
+    {
+      "Type": "List",
+      "Children": [
+        {
+          "Type": "MarkdownText",
+          "Text": "The installation was complete and the samples have been extracted to the location you specified. \n\nPress finish in order to close the installer."
+        }
+      ]
+    }
+  ],
+  "Assets": [
+    {
+      "Type": 3,
+      "ID": "eula",
+      "RelativePath": true,
+      "OperatingSystem": 0,
+      "Filename": "../license.txt"
+    },
+    {
+      "Type": 0,
+      "ID": "icon",
+      "RelativePath": true,
+      "OperatingSystem": 0,
+      "Filename": "icon_macos.png"
+    }
+  ]
+}
