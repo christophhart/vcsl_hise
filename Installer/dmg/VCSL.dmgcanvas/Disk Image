@@ -47,7 +47,7 @@
     "teamID" : "PF9H8PK77F",
     "toolbarVisible" : false,
     "uid" : "aanragbqkp",
-    "validationScheme" : 0,
+    "validationScheme" : 2,
     "viewLayout" : 0,
     "volumeName" : "VCSL Installer",
     "volumeSize" : 0,
@@ -71,20 +71,12 @@
         "relativeFilePath" : "..\/VCSL Hise Edition Installer.app"
       },
       {
-        "filePath" : "\/Users\/christophhart\/Development\/vcsl_hise\/Installer\/VCSL Hise Edition 1_0_0_Samples.hr1",
-        "iconSize" : 100,
-        "invisible" : true,
-        "isAnAlias" : false,
-        "location" : "{97, 64}",
-        "relativeFilePath" : "..\/VCSL Hise Edition 1_0_0_Samples.hr1"
-      },
-      {
-        "filePath" : "\/Users\/christophhart\/Development\/vcsl_hise\/Installer\/VCSL Hise Edition.vst3",
+        "filePath" : "\/Users\/christophhart\/Development\/vcsl_hise\/Binaries\/Builds\/MacOSX\/build\/Release\/VCSL Hise Edition.vst3",
         "iconSize" : 100,
         "invisible" : true,
         "isAnAlias" : false,
         "location" : "{515, 64}",
-        "relativeFilePath" : "..\/VCSL Hise Edition.vst3"
+        "relativeFilePath" : "..\/..\/Binaries\/Builds\/MacOSX\/build\/Release\/VCSL Hise Edition.vst3"
       }
     ],
     "windowContentWidth" : 600,

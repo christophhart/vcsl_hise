@@ -13,11 +13,14 @@
   "LayoutData": {
     "StyleSheet": "Dark",
     "Style": "#content\n{\n\tpadding-left: 80px;\n\tpadding-right: 80px;\n\t\n}\n",
+    "UseViewport": true,
     "DialogWidth": 800,
     "DialogHeight": 600
   },
   "GlobalState": {
-    
+    "company": "HISE",
+    "product": "VCSL Hise Edition",
+    "version": "1.0.0"
   },
   "Children": [
     {
@@ -147,7 +150,7 @@
             }
           ]
         }
-      ],
+      ]
     },
     {
       "Type": "List",
@@ -167,8 +170,8 @@
         {
           "Type": "RelativeFileLoader",
           "ID": "sampleArchive",
-          "SpecialLocation": "parentDirectory",
-          "RelativePath": "$product 1_0_0_Samples.hr1"
+          "SpecialLocation": "tempDirectory",
+          "RelativePath": "$product.hr1"
         },
         {
           "Type": "FileSelector",
@@ -178,11 +181,19 @@
           "UseInitValue": true
         },
         {
+          "Type": "DownloadTask",
+          "Text": "Download ",
+          "EventTrigger": "OnSubmit",
+          "Source": "https://github.com/christophhart/vcsl_hise/releases/download/1.0.0/VCSL.Hise.Edition_1_0_0_Samples.hr1",
+          "Target": "$sampleArchive"
+        },
+        {
           "Type": "HlacDecoder",
           "Text": "Progress",
           "EventTrigger": "OnSubmit",
           "Target": "$sampleLocation",
-          "Source": "$sampleArchive"
+          "Source": "$sampleArchive",
+          "Cleanup": true
         },
         {
           "Type": "AppDataFileWriter",
@@ -191,7 +202,8 @@
           "Target": "LinkFile"
         }
       ],
-      "Style": "gap: 10px;"
+      "Style": "gap: 10px;",
+      "Text": ""
     },
     {
       "Type": "List",
