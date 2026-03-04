@@ -22,6 +22,11 @@ public:
 	ColourMidiProcessor(ModulatorSynth* owner, int index) :
 		HardcodedScriptProcessor(owner->getMainController(), "Colour" + String(index+1), owner)
 	{
+		callOnInitAndInitialiseParameters();
+	}
+
+	void onInit() override
+	{
 		colour = Content.addKnob("colour", 0, 0);
 		colour->setRange(-12, 12, 1);
 	}

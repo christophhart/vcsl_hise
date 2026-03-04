@@ -148,7 +148,7 @@ public:
 			freqSlider.connect(indexed("Filter"));
 			
 			filterPanel.addAndMakeVisible(qSlider);
-			qSlider.setMode(HiSlider::Linear, 0.1, 9.0, 1.0, 0.01);
+			qSlider.setMode(HiSlider::Linear, { 0.1, 9.0, 1.0, 0.01 });
 			qSlider.connect(indexed("Filter"));
 			
 			filterPanel.addAndMakeVisible(filterGraph);

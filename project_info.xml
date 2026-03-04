@@ -18,7 +18,7 @@
   <RedirectSampleFolder value=""/>
   <AAXCategoryFX value="AAX_ePlugInCategory_Modulation"/>
   <SupportMonoFX value="No"/>
-  <UseRawFrontend value="0"/>
+  <UseRawFrontend value="1"/>
   <EmbedImageFiles value="Yes"/>
   <ExtraDefinitionsLinux value="HISE_DEACTIVATE_OVERLAY=1"/>
   <VST3Category value="Sampler"/>
@@ -41,4 +41,6 @@
   <CompileWithPerfetto value="No"/>
   <CompileWithDebugSymbols value="No"/>
   <IncludeLorisInFrontend value="No"/>
+  <ExtraDefinitionsNetworkDll value=""/>
+  <ProjectType value="Instrument"/>
 </ProjectSettings>

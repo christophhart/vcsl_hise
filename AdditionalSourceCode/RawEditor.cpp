@@ -36,7 +36,7 @@ VCSOInterface::SamplerTab::SamplerTab(MainController* mc, int index_) :
 
 	instrumentPanel.addAndMakeVisible(colourSlider);
 	colourSlider.connect(indexed("Colour"));
-	colourSlider.setMode(HiSlider::Linear, -12.0, 12.0, 0.0, 1.0);
+	colourSlider.setMode(HiSlider::Linear, { -12.0, 12.0, 0.0, 1.0 });
 
 	auto f = [this](float newValue)
 	{
@@ -66,7 +66,7 @@ VCSOInterface::SamplerTab::SamplerTab(MainController* mc, int index_) :
 	velocityEditor.setColour(TableEditor::ColourIds::bgColour, Colour(0x00161616));
 	velocityEditor.setColour(TableEditor::ColourIds::fillColour, Colour(index == 0 ? leftColour : rightColour));
 	velocityEditor.setColour(TableEditor::ColourIds::lineColour, Colour(0xFB5F5F5F));
-	velocityEditor.connectToLookupTableProcessor(velocityMod, 0);
+	velocityEditor.setComplexDataUIBase(velocityMod->getTable(0));
 	velocityEditor.setLineThickness(1.0f);
 }
 
